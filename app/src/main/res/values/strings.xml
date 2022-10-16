@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Quản Lý Chăn Nuôi</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Quản Lý Chăn Nuôi</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_qlchungloai">Quản lý chủng loại</string>
+    <string name="title_qlvatnuoi">Quản lý vật nuôi</string>
+    <string name="title_kinhnghiem">Kinh nghiệm</string>
+    <string name="title_chiphi">Chi phí</string>
+    <string name="title_thongke">Thống kê</string>
+    <string name="title_themchungloai">Thêm Chủng Loại</string>
+    <string name="maChungLoai">Mã Chủng Loại</string>
+    <string name="tenChungLoai">Tên Chủng Loại</string>
+    <string name="viTriChuong">Vị Trí Chuồng</string>
+    <string name="Cancel">Hủy</string>
+    <string name="them">Thêm</string>
+    <string name="title_chitietchungloai">Chi Tiết Chủng Loại</string>
+    <string name="update">Sửa</string>
+    <string name="soluong">Số Lượng</string>
+    <string name="thucan">Loại Thức Ăn</string>
+    <string name="suckhoe">Tình Trạng Sức Khỏe</string>
+    <string name="btn_tim">Search</string>
+    <string name="title_chitietvatloai">Chi Tiết Vật Nuôi</string>
+    <string name="MavatNUoi">Mã Vật Nuôi</string>
+    <string name="maChiphi">Mã chi phí</string>
+    <string name="tenThucan">Tên thức ăn</string>
+    <string name="GiaTien">Giá Tiền</string>
+    <string name="ngaymua_chiphi">DD/MM/YYYY</string>
+    <string name="btn_chon">Chọn</string>
+    <string name="ngay_ThongKe">Hôm nay:</string>
+    <string name="thang_thongke">Tháng này:</string>
+    <string name="nam_thongke">Năm:</string>
+
+</resources>

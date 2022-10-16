@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fpoly.dell.project1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/baydan"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/vatnuoi1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.fpoly.dell.project.ui.ManHinhChaoActivity"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fpoly.dell.project.ui.HomeActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ChungLoaiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.VatNuoiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ChiTietChungLoaiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.ChungLoaiActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThemChungLoaiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.ChungLoaiActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThemVatNuoiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.VatNuoiActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.KinhNghiemActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ChiPhiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThemChiPhiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.ChiPhiActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ChiTietChiPhiActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.ChiPhiActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThucAnActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThemThucAnActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.ThucAnActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThongKeActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity">
+        </activity>
+        <activity
+            android:name="com.fpoly.dell.project.ui.BayChuongActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity">
+        </activity>
+    </application>
+
+</manifest>
