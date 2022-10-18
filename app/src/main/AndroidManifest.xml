@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.fpoly.dell.project.ui.ManHinhChaoActivity"
+            android:name="com.fpoly.dell.project.ui.LoginActivity"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.fpoly.dell.project.ui.HomeActivity" />
+
+        <activity
+            android:name="com.fpoly.dell.project.ui.HomeActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.LoginActivity" />
         <activity
             android:name="com.fpoly.dell.project.ui.ChungLoaiActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
@@ -57,6 +60,10 @@
         <activity
             android:name="com.fpoly.dell.project.ui.ThongKeActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity">
+        </activity>
+        <activity
+            android:name="com.fpoly.dell.project.ui.RegisterActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.LoginActivity">
         </activity>
     </application>
 
