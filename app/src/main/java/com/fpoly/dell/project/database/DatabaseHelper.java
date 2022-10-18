@@ -1,11 +1,9 @@
 package com.fpoly.dell.project.database;
 
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.fpoly.dell.project.dao.BayChuongDao;
 import com.fpoly.dell.project.dao.ChiPhiDao;
 import com.fpoly.dell.project.dao.ChungLoaiDao;
 import com.fpoly.dell.project.dao.ThucAnDao;
@@ -37,7 +35,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(VatNuoiDao.SQL_VATNUOI);
         db.execSQL(ChiPhiDao.SQL_CHIPHI);
         db.execSQL(ThucAnDao.SQL_THUCAN);
-        db.execSQL(BayChuongDao.SQL_BAYCHUONG);
+        //db.execSQL(BayChuongDao.SQL_BAYCHUONG);
     }
 
     @Override
@@ -46,7 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists "+VatNuoiDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ChiPhiDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ThucAnDao.TABLE_NAME);
-        db.execSQL("Drop table if exists "+ BayChuongDao.TABLE_NAME);
+        //db.execSQL("Drop table if exists "+ BayChuongDao.TABLE_NAME);
 
     }
 

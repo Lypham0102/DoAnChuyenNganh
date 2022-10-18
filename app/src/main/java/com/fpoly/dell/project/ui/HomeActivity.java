@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout chiphi;
     private LinearLayout thongke;
     private LinearLayout thucan;
-    private LinearLayout baychuong;
+    //private LinearLayout baychuong;
 
 
     @Override
@@ -70,13 +70,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(b);
             }
         });
-        baychuong.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b = new Intent(HomeActivity.this, BayChuongActivity.class);
-                startActivity(b);
-            }
-        });
+
 
     }
 
@@ -87,7 +81,7 @@ public class HomeActivity extends AppCompatActivity {
         kinhnghiem = (LinearLayout) findViewById(R.id.kinhnghiem);
         chiphi = (LinearLayout) findViewById(R.id.chiphi);
         thongke = (LinearLayout) findViewById(R.id.thongke);
-        baychuong= (LinearLayout) findViewById(R.id.baydan);
+        //baychuong= (LinearLayout) findViewById(R.id.baydan);
 
 
     }
