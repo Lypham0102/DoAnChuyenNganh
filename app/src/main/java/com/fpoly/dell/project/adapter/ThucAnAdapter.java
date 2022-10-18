@@ -33,9 +33,9 @@ import java.util.List;
 public class ThucAnAdapter extends BaseAdapter implements Filterable {
     private Filter thucanFilter;
     private List<ThucAn> thucAnList;
-    private  List<ThucAn> thucAns;
-    private  Activity context;
-    private  LayoutInflater inflater;
+    private List<ThucAn> thucAns;
+    private Activity context;
+    private LayoutInflater inflater;
     private ThucAnDao thucAnDao;
     private DatabaseHelper databaseHelper;
     private Button btnHuy;
@@ -69,23 +69,18 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
 
     static class ViewHolder {
         ImageView img, imgDelete;
-        TextView txtMathucan,
-            txtTenthucan,
-                txtMaloai,
-            txtSoLuong,
-                txtDongia;
+        TextView txtMathucan,txtTenthucan,txtSoLuong;
     }
 
     @Override
     public View getView(final int i, View convertView, ViewGroup viewGroup) {
-        ThucAnAdapter.ViewHolder holder;
+        ViewHolder holder;
         if (convertView == null) {
-            holder = new ThucAnAdapter.ViewHolder();
+            holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.customthucan, null);
             holder.img = convertView.findViewById(R.id.imgavatar);
             holder.txtMathucan = convertView.findViewById(R.id.tvmathucan);
             holder.txtTenthucan = convertView.findViewById(R.id.tv_tenthucan);
-
             holder.txtSoLuong = convertView.findViewById(R.id.tvsoluong);
 
             //holder.txtDongia = convertView.findViewById(R.id.);
@@ -139,23 +134,17 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
                     });
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
-
-
                 }
             });
             convertView.setTag(holder);
 
         } else
-            holder = (ThucAnAdapter.ViewHolder) convertView.getTag();
+            holder = (ViewHolder) convertView.getTag();
         ThucAn entry = thucAnList.get(i);
-        holder.img.setImageResource(R.drawable.thucpham);
+        holder.img.setImageResource(R.drawable.vatnuoi1);
         holder.txtMathucan.setText("Mã thức ăn: " + entry.getMathucan());
         holder.txtTenthucan.setText("Tên thức ăn: " + entry.getTenthucan());
-        holder.txtMaloai.setText("Mã loại: " + entry.getMaloai());
         holder.txtSoLuong.setText("Số Lượng: " + entry.getSoluong());
-        holder.txtDongia.setText("Đơn giá: " + entry.getDongia());
-        //holder.txtThucAn.setText("Thức Ăn: " + entry.getMaloai());
-
         return convertView;
     }
     @Override
@@ -168,7 +157,7 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
     }
     public Filter getFilter() {
         if (thucanFilter == null)
-            thucanFilter = new ThucAnAdapter.CustomFilter();
+            thucanFilter = new CustomFilter();
         return thucanFilter;
     }
     private class CustomFilter extends Filter {
@@ -183,7 +172,7 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
                 List<ThucAn> lsHoaDon = new ArrayList<>();
                 for (ThucAn p : thucAnList) {
                     if
-                    (p.getMathucan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getTenthucan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;

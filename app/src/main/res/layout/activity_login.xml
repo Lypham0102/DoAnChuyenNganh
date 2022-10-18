@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6CEF72"
+    android:background="#2D5E57"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -44,7 +44,7 @@
             android:layout_marginTop="8dp"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/colorAccent">
+            app:passwordToggleTint="#000000">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/editTextPassword"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/colorAccent"
+            android:background="#8A6E44"
             android:text="@string/login"
             android:textColor="@android:color/white" />
 

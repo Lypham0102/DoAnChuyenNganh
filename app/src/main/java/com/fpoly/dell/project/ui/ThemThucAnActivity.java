@@ -42,9 +42,8 @@ public class ThemThucAnActivity extends AppCompatActivity{
         setTitle("Thêm thức ăn");
 
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
         edMathucan = (EditText) findViewById(R.id.ed_Mathucan);
-        //getThucAn();
         edTenthucan = (EditText) findViewById(R.id.ed_Tenthucan);
         edMaloai = (EditText) findViewById(R.id.ed_Maloai);
         edSoluong = (EditText) findViewById(R.id.ed_Soluong);
@@ -85,7 +84,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
                 if (thucAnDao.insertThucAn(thucAn) > 0) {
                     Toast.makeText(getApplicationContext(), "Thêm thành công",
                             Toast.LENGTH_SHORT).show();
-                    Intent a = new Intent(ThemThucAnActivity.this, ThucAnActivity.class);
+                    Intent a = new Intent(ThemThucAnActivity.this, HomeActivity.class);
                     startActivity(a);
 
                 } else {

@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.fpoly.dell.project.database.SqliteHelper;
+import com.fpoly.dell.project.model.User;
 import com.fpoly.dell.project1.R;
 
 /**

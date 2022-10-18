@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.fpoly.dell.project.database.SqliteHelper;
+import com.fpoly.dell.project.model.User;
 import com.fpoly.dell.project1.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -61,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
                         startActivity(intent);
                         finish();
+                        Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
                     } else {
 
                         //User Logged in Failed

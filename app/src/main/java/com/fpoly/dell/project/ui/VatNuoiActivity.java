@@ -31,7 +31,7 @@ public class VatNuoiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vat_nuoi);
-        setTitle("Quản Lý Vật Nuôi");
+        setTitle("Quản lý vật nuôi");
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);

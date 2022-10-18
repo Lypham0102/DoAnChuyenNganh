@@ -36,6 +36,7 @@ public class VatNuoiAdapter extends BaseAdapter implements Filterable {
     private Button btnXoa;
 
     public VatNuoiAdapter(List<VatNuoi> vatNuoiList, Activity context) {
+        super();
         this.vatNuoiList = vatNuoiList;
         this.vatNuois=vatNuoiList;
         this.context = context;
@@ -125,8 +126,6 @@ public class VatNuoiAdapter extends BaseAdapter implements Filterable {
                     });
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
-
-
                 }
             });
             convertView.setTag(holder);
@@ -138,11 +137,6 @@ public class VatNuoiAdapter extends BaseAdapter implements Filterable {
         holder.txtTenVatNuoi.setText("Tên: " + entry.getMachungloai());
         holder.txtSoLuong.setText("Số Lượng: " + entry.getSoluong());
         holder.txtThucAn.setText("Thức Ăn: " + entry.getLoaithucan());
-
-
-
-
-
         return convertView;
     }
     @Override

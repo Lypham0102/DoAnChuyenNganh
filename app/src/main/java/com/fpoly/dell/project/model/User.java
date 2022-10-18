@@ -1,4 +1,4 @@
-package com.fpoly.dell.project.ui;
+package com.fpoly.dell.project.model;
 public class User {
     public String id;
     public String userName;

@@ -31,7 +31,7 @@ public class ThucAnActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thuc_an);
-        setTitle("Quản Lý thức ăn");
+        setTitle("Thức ăn vật nuôi");
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);

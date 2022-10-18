@@ -14,25 +14,20 @@
 
         <EditText
             android:id="@+id/edSearch"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:hint="@string/btn_tim"
             android:maxLines="1" />
-        <ListView
 
+        <ListView
             android:id="@+id/lv_vatnuoi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp">
-
         </ListView>
     </LinearLayout>
-
-
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"
@@ -44,7 +39,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
-
-
-
 </android.support.constraint.ConstraintLayout>

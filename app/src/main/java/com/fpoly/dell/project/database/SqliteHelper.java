@@ -1,4 +1,4 @@
-package com.fpoly.dell.project.ui;
+package com.fpoly.dell.project.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,8 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.fpoly.dell.project.model.User;
+
 /**
- * Created by amardeep on 10/26/2017.
+
  */
 
 public class SqliteHelper extends SQLiteOpenHelper {
