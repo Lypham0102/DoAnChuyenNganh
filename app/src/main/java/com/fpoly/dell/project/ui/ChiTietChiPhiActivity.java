@@ -62,7 +62,7 @@ public class ChiTietChiPhiActivity extends AppCompatActivity implements DatePick
 
 
         tvMachiphi.setText("Mã chi phí: "+machiphi);
-        tvTenthucan.setText("Tên thức ăn: "+tenthucan);
+        tvTenthucan.setText("Đồ nhập: "+tenthucan);
         tvNgaymua.setText("Ngày mua: "+ngaynhap);
         tvSoluong.setText("Số lượng: "+soluong);
         tvGiatien.setText("Giá Tiền: "+numberFormat.format(Long.parseLong(giatien))+" vnđ");

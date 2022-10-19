@@ -110,10 +110,10 @@ public class ThemChiPhiActivity extends AppCompatActivity implements
     }
     private int validation() {
         if
-                (edtMachiphi.getText().toString().isEmpty() || edtTenthucan.getText().toString().isEmpty()
+        (edtMachiphi.getText().toString().isEmpty() || edtTenthucan.getText().toString().isEmpty()
                 || edNgayMua.getText().toString().isEmpty() || edtSoLuongChiPhi.getText().toString().isEmpty()
                 || edtGiatien.getText().toString().isEmpty()
-                ) {
+        ) {
             return -1;
         }
         return 1;

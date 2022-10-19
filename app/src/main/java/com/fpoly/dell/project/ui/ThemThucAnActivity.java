@@ -84,7 +84,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
                 if (thucAnDao.insertThucAn(thucAn) > 0) {
                     Toast.makeText(getApplicationContext(), "Thêm thành công",
                             Toast.LENGTH_SHORT).show();
-                    Intent a = new Intent(ThemThucAnActivity.this, HomeActivity.class);
+                    Intent a = new Intent(ThemThucAnActivity.this, ThucAnActivity.class);
                     startActivity(a);
 
                 } else {

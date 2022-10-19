@@ -4,16 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/drawable/side_nav_bar.xml" value="0.1385" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_bay_dan.xml" value="0.1140625" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_chi_phi.xml" value="0.128125" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_chi_tiet_chi_phi.xml" value="0.15625" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_chi_tiet_chung_loai.xml" value="0.128125" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_chung_loai.xml" value="0.128125" />
-        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_home.xml" value="0.128125" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_home.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_register.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_them_bay_dan.xml" value="0.1140625" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_them_chi_phi.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_them_chung_loai.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_them_thuc_an.xml" value="0.128125" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_them_vat_nuoi.xml" value="0.128125" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_thuc_an.xml" value="0.128125" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/activity_vat_nuoi.xml" value="0.128125" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/custombaychuong.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/custombaydan.xml" value="0.1140625" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/customchiphi.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/customchungloai.xml" value="0.15625" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/customthucan.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/customvatnuoi.xml" value="0.128125" />
         <entry key="..\:/Users/ADMIN/Desktop/DoAnChuyenNganh/app/src/main/res/layout/dialog_delete.xml" value="0.128125" />

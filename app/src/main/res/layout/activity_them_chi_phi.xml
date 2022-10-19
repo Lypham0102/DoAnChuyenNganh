@@ -61,7 +61,7 @@
                     android:id="@+id/edtTenthucan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/tenThucan"
+                    android:hint="Đồ nhập"
                     android:imeActionId="6"
                     android:imeOptions="actionDone"
                     android:inputType="text"

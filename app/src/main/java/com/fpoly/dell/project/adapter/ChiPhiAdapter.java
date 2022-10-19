@@ -175,7 +175,7 @@ public class ChiPhiAdapter extends BaseAdapter implements Filterable {
                 List<ChiPhi> lsHoaDon = new ArrayList<>();
                 for (ChiPhi p : arrChiPhi) {
                     if
-                            (p.getTenthucan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getTenthucan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;

@@ -132,7 +132,7 @@ static  class ViewHolder{
         ChungLoai entry = chungloailist.get(i);
         holder.img_avatar.setImageResource(R.drawable.iconanimals);
         holder.txtTenChungLoai.setText("Tên chủng loại: "+entry.getTenvatnuoi());
-        holder.txtViTriChuong.setText("Vị trí: "+entry.getVitrichuong());
+        holder.txtViTriChuong.setText("Khu vực nuôi: "+entry.getVitrichuong());
         return convertView;
     }
     @Override

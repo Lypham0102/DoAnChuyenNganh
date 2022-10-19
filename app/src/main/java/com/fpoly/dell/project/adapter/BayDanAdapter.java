@@ -1,9 +1,6 @@
 package com.fpoly.dell.project.adapter;
 
-import android.widget.BaseAdapter;
-import android.widget.Filterable;
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -17,47 +14,44 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fpoly.dell.project.dao.ChiPhiDao;
-import com.fpoly.dell.project.dao.ThucAnDao;
-import com.fpoly.dell.project.database.DatabaseHelper;
-import com.fpoly.dell.project1.R;
+import com.fpoly.dell.project.dao.BayDanDao;
 import com.fpoly.dell.project.dao.VatNuoiDao;
+import com.fpoly.dell.project.database.DatabaseHelper;
+import com.fpoly.dell.project.model.BayDan;
 import com.fpoly.dell.project.model.VatNuoi;
-import com.fpoly.dell.project.model.ThucAn;
-
-
+import com.fpoly.dell.project1.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThucAnAdapter extends BaseAdapter implements Filterable {
-    private Filter thucanFilter;
-    private List<ThucAn> thucAnList;
-    private List<ThucAn> thucAns;
+public class BayDanAdapter extends BaseAdapter implements Filterable{
+    private Filter baydanFilter;
+    private List<BayDan> bayDanList;
+    private List<BayDan> bayDans;
     private Activity context;
     private LayoutInflater inflater;
-    private ThucAnDao thucAnDao;
+    private BayDanDao bayDanDao;
     private DatabaseHelper databaseHelper;
     private Button btnHuy;
     private Button btnXoa;
 
-    public ThucAnAdapter(List<ThucAn> thucAnList, Activity context) {
+    public BayDanAdapter(List<BayDan> bayDanList, Activity context) {
         super();
-        this.thucAnList = thucAnList;
-        this.thucAns=thucAnList;
+        this.bayDanList = bayDanList;
+        this.bayDans=bayDanList;
         this.context = context;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        thucAnDao = new ThucAnDao(context);
+        bayDanDao = new BayDanDao(context);
     }
 
     @Override
     public int getCount() {
-        return thucAnList.size();
+        return bayDanList.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return thucAnList.get(i);
+        return bayDanList.get(i);
     }
 
     @Override
@@ -65,11 +59,9 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
         return 0;
     }
 
-
-
     static class ViewHolder {
         ImageView img, imgDelete;
-        TextView txtMaloai,txtTenthucan,txtSoLuong;
+        TextView txtMaBayDan, txtSoBayDan, txtSoLuongVat;
     }
 
     @Override
@@ -77,14 +69,11 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
         ViewHolder holder;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.customthucan, null);
+            convertView = inflater.inflate(R.layout.custombaydan, null);
             holder.img = convertView.findViewById(R.id.imgavatar);
-
-            holder.txtTenthucan = convertView.findViewById(R.id.tvtenthucan);
-            holder.txtMaloai = convertView.findViewById(R.id.tvmaloai);
-            holder.txtSoLuong = convertView.findViewById(R.id.tvsoluong);
-
-            //holder.txtDongia = convertView.findViewById(R.id.);
+            holder.txtMaBayDan = convertView.findViewById(R.id.tvmabaydan);
+            holder.txtSoBayDan = convertView.findViewById(R.id.tvsobaydan);
+            holder.txtSoLuongVat = convertView.findViewById(R.id.tvsoluongvat);
 
             holder.imgDelete = convertView.findViewById(R.id.imgdeletesach);
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
@@ -92,15 +81,15 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
                 public void onClick(View v) {
                     final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setTitle("Xóa");
-                    builder.setMessage("Bạn có muốn xóa thức ăn này không?");
+                    builder.setMessage("Bạn có muốn xóa không?");
                     builder.setCancelable(true);
                     builder.setNegativeButton("Xóa", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             databaseHelper = new DatabaseHelper(context);
-                            thucAnDao = new ThucAnDao(context);
-                            thucAnDao.deleteThucAn(thucAnList.get(i).getMathucan());
-                            thucAnList.remove(i);
+                            bayDanDao = new BayDanDao(context);
+                            bayDanDao.deleteBayDan(bayDanList.get(i).getMaBayDan());
+                            bayDanList.remove(i);
                             notifyDataSetChanged();
                             dialog.dismiss();
                         }
@@ -118,13 +107,12 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
             convertView.setTag(holder);
 
         } else
-            holder = (ViewHolder) convertView.getTag();
-        ThucAn entry = thucAnList.get(i);
+            holder = (BayDanAdapter.ViewHolder) convertView.getTag();
+        BayDan entry = bayDanList.get(i);
         holder.img.setImageResource(R.drawable.vatnuoi1);
-
-        holder.txtTenthucan.setText("Tên thức ăn: " + entry.getTenthucan());
-        holder.txtMaloai.setText("Mã loại: " + entry.getMaloai());
-        holder.txtSoLuong.setText("Số Lượng: " + entry.getSoluong());
+        holder.txtMaBayDan.setText("Mã: " + entry.getMaBayDan());
+        holder.txtSoBayDan.setText("Số chuồng: " + entry.getSoBayDan());
+        holder.txtSoLuongVat.setText("Số lượng: " + entry.getSoLuongVat());
         return convertView;
     }
     @Override
@@ -133,26 +121,26 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
     }
 
     public void resetData() {
-        thucAnList = thucAns;
+        bayDanList = bayDans;
     }
     public Filter getFilter() {
-        if (thucanFilter == null)
-            thucanFilter = new CustomFilter();
-        return thucanFilter;
+        if (baydanFilter == null)
+            baydanFilter = new BayDanAdapter.CustomFilter();
+        return baydanFilter;
     }
     private class CustomFilter extends Filter {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults results = new FilterResults();
             if (constraint == null || constraint.length() == 0) {
-                results.values = thucAns;
-                results.count = thucAns.size();
+                results.values = bayDans;
+                results.count = bayDans.size();
             }
             else {
-                List<ThucAn> lsHoaDon = new ArrayList<>();
-                for (ThucAn p : thucAnList) {
+                List<BayDan> lsHoaDon = new ArrayList<>();
+                for (BayDan p : bayDanList) {
                     if
-                    (p.getTenthucan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getMaBayDan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;
@@ -163,10 +151,11 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
         @Override
         protected void publishResults(CharSequence constraint,
                                       FilterResults results) {
+// Now we have to inform the adapter about the new list filtered
             if (results.count == 0)
                 notifyDataSetInvalidated();
             else {
-                thucAnList = (List<ThucAn>) results.values;
+                bayDanList = (List<BayDan>) results.values;
                 notifyDataSetChanged();
             }
         }

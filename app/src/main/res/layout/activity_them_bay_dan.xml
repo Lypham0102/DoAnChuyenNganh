@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context="com.fpoly.dell.project.ui.ThemVatNuoiActivity">
-
+    tools:context="com.fpoly.dell.project.ui.ThemBayDanActivity">
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
@@ -37,10 +36,10 @@
                 app:counterMaxLength="5">
 
                 <EditText
-                    android:id="@+id/ed_mavatnuoi"
+                    android:id="@+id/ed_mabaydan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/MavatNUoi"
+                    android:hint="Mã bầy đàn: "
                     android:maxLength="5" />
             </android.support.design.widget.TextInputLayout>
 
@@ -49,17 +48,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
-
                 <Spinner
-
-                    android:id="@+id/sp_Vatnuoi"
+                    android:id="@+id/sp_Thucan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-
                 </Spinner>
             </LinearLayout>
-
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,10 +62,10 @@
                 app:counterMaxLength="5">
 
                 <EditText
-                    android:id="@+id/ed_soluongvatnuoi"
+                    android:id="@+id/ed_sobaydan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/soluong"
+                    android:hint="Chuồng số: "
                     android:inputType="number"
                     android:maxLength="5" />
             </android.support.design.widget.TextInputLayout>
@@ -84,28 +78,12 @@
                 app:counterMaxLength="50">
 
                 <EditText
-                    android:id="@+id/ed_thucan"
+                    android:id="@+id/ed_soluongvat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/thucan"
+                    android:hint="Số lượng vật: "
                     android:maxLength="50" />
             </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:counterEnabled="true"
-                app:counterMaxLength="50">
-
-                <EditText
-                    android:id="@+id/ed_suckhoe"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:hint="@string/suckhoe"
-                    android:maxLength="50" />
-            </android.support.design.widget.TextInputLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -136,4 +114,5 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

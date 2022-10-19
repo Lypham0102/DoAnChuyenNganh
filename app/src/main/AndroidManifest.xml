@@ -62,5 +62,11 @@
         <activity
             android:name="com.fpoly.dell.project.ui.RegisterActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.LoginActivity"/>
+        <activity
+            android:name="com.fpoly.dell.project.ui.BayDanActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity"/>
+        <activity
+            android:name="com.fpoly.dell.project.ui.ThemBayDanActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.BayDanActivity"/>
     </application>
 </manifest>

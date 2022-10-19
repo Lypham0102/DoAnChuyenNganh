@@ -29,7 +29,7 @@ public class ThongKeActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        setTitle("DOANH THU");
+        setTitle("TỔNG CHI TIÊU");
 
         chiPhiDao = new ChiPhiDao(this);
         tvThongKeNgay.setText("Hôm nay: "+numberFormat.format(chiPhiDao.getDoanhThuTheoNgay())+" vnđ");
