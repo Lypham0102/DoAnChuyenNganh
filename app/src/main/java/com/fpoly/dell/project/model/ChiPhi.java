@@ -9,9 +9,7 @@ public class ChiPhi {
     private String Soluong;
     private String Giatien;
     public  ChiPhi(){
-
     }
-
     public ChiPhi(String machiphi, String tenthucan, Date ngaynhap, String soluong, String giatien) {
         Machiphi = machiphi;
         Tenthucan = tenthucan;

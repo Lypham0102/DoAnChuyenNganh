@@ -56,15 +56,6 @@ public class ThucAn {
     }
 
     @Override
-//    public String toString() {
-//        return "ThucAn{" +
-//                "mathucan='" + mathucan + '\'' +
-//                ", Tenthucan='" + Tenthucan + '\'' +
-//                ", Maloai='" + Maloai + '\'' +
-//                ", Soluong='" + Soluong + '\'' +
-//                ", Dongia='" + Dongia + '\'' +
-//                '}';
-//    }
     public String toString() {
         return getMathucan()+" | "+getTenthucan()+" | "+getMaloai();
     }

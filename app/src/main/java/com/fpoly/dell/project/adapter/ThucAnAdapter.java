@@ -120,7 +120,7 @@ public class ThucAnAdapter extends BaseAdapter implements Filterable {
         } else
             holder = (ViewHolder) convertView.getTag();
         ThucAn entry = thucAnList.get(i);
-        holder.img.setImageResource(R.drawable.vatnuoi1);
+        holder.img.setImageResource(R.drawable.thucan1);
 
         holder.txtTenthucan.setText("Tên thức ăn: " + entry.getTenthucan());
         holder.txtMaloai.setText("Mã loại: " + entry.getMaloai());

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#DCD893"
+    android:background="#A2D5AB"
     tools:context="com.fpoly.dell.project.ui.HomeActivity">
     <LinearLayout
         android:layout_marginTop="25dp"

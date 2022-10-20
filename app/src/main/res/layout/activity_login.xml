@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2D5E57"
+    android:background="#519383"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="266dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
             android:src="@drawable/projectnotes" />
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="#8A6E44"
+            android:background="#62C4C3"
             android:text="@string/login"
             android:textColor="@android:color/white" />
 
