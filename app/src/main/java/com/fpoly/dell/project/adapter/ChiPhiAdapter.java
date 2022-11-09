@@ -89,28 +89,6 @@ public class ChiPhiAdapter extends BaseAdapter implements Filterable {
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    final Dialog dialog = new Dialog(context);
-//                    dialog.setContentView(R.layout.dialog_delete);
-//                    dialog.setTitle("Bạn có muốn xóa không ?");
-//                    btnXoa = dialog.findViewById(R.id.btnXoa);
-//                    btnHuy = dialog.findViewById(R.id.btnHuy);
-//                    dialog.show();
-//
-//                    btnXoa.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            chiPhiDao.deleteChiPhi(arrChiPhi.get(position).getMachiphi());
-//                            arrChiPhi.remove(position);
-//                            notifyDataSetChanged();
-//                            dialog.dismiss();
-//                        }
-//                    });
-//                    btnHuy.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            dialog.dismiss();
-//                        }
-//                    });
                     final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setTitle("Xóa");
                     builder.setMessage("Bạn có muốn xóa không?");
@@ -186,7 +164,7 @@ public class ChiPhiAdapter extends BaseAdapter implements Filterable {
         @Override
         protected void publishResults(CharSequence constraint,
                                       FilterResults results) {
-// Now we have to inform the adapter about the new list filtered
+
             if (results.count == 0)
                 notifyDataSetInvalidated();
             else {

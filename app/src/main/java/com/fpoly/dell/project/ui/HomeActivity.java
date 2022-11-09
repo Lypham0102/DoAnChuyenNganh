@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout thongke;
     private LinearLayout thucan;
     private LinearLayout baydan;
+    private LinearLayout checkbd;
 
 
     @Override
@@ -77,6 +78,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(b);
             }
         });
+        checkbd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(HomeActivity.this, CheckBDActivity.class);
+                startActivity(b);
+            }
+        });
 
     }
 
@@ -88,6 +96,6 @@ public class HomeActivity extends AppCompatActivity {
         chiphi = (LinearLayout) findViewById(R.id.chiphi);
         thongke = (LinearLayout) findViewById(R.id.thongke);
         baydan= (LinearLayout) findViewById(R.id.baydan);
-
+        checkbd= (LinearLayout) findViewById(R.id.checkbaydan);
     }
 }

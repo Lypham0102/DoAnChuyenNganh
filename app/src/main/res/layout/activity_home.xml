@@ -163,10 +163,10 @@
 
         <LinearLayout
             android:id="@+id/thongke"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -181,6 +181,26 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title_thongke"
                 android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/checkbaydan"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/check"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kiểm tra bầy đàn"
+                android:textSize="18sp"/>
         </LinearLayout>
 
     </LinearLayout>

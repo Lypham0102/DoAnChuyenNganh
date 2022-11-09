@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.fpoly.dell.project.ui.LoginActivity"
-            android:theme="@style/NoActionBar">
+            android:theme="@style/NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -68,5 +69,10 @@
         <activity
             android:name="com.fpoly.dell.project.ui.ThemBayDanActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.BayDanActivity"/>
+        <activity
+            android:name="com.fpoly.dell.project.ui.CheckBDActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity"/>
+
     </application>
+
 </manifest>

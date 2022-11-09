@@ -71,5 +71,16 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal" />
+        <Button
+            android:id="@+id/btnAuthenticate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login With A FingerPrint "
+            android:layout_gravity="center_horizontal"
+            />
+
+
+
+
     </LinearLayout>
 </ScrollView>

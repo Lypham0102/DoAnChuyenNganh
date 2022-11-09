@@ -1,7 +1,7 @@
 package com.fpoly.dell.project.adapter;
 
 import android.app.Activity;
-import android.content.Context;
+import android.content.Context;;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
@@ -151,7 +151,7 @@ public class BayDanAdapter extends BaseAdapter implements Filterable{
         @Override
         protected void publishResults(CharSequence constraint,
                                       FilterResults results) {
-// Now we have to inform the adapter about the new list filtered
+
             if (results.count == 0)
                 notifyDataSetInvalidated();
             else {

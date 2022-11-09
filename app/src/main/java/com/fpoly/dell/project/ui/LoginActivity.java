@@ -18,19 +18,17 @@ import com.fpoly.dell.project1.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //Declaration EditTexts
+
     EditText editTextEmail;
     EditText editTextPassword;
 
-    //Declaration TextInputLayout
     TextInputLayout textInputLayoutEmail;
     TextInputLayout textInputLayoutPassword;
 
-    //Declaration Button
     Button buttonLogin;
 
-    //Declaration SqliteHelper
     SqliteHelper sqliteHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,33 +38,35 @@ public class LoginActivity extends AppCompatActivity {
         initCreateAccountTextView();
         initViews();
 
-        //set click event of login button
+
+
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                //Check user input is correct or not
+
                 if (validate()) {
 
-                    //Get values from EditText fields
+
                     String Email = editTextEmail.getText().toString();
                     String Password = editTextPassword.getText().toString();
 
-                    //Authenticate user
+
+
                     User currentUser = sqliteHelper.Authenticate(new User(null, null, Email, Password));
 
-                    //Check Authentication is successful or not
+
                     if (currentUser != null) {
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
 
-                        //User Logged in Successfully Launch You home screen activity
+
                         Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
                         startActivity(intent);
                         finish();
                         Snackbar.make(buttonLogin, "Successfully Logged in!", Snackbar.LENGTH_LONG).show();
                     } else {
 
-                        //User Logged in Failed
+
                         Snackbar.make(buttonLogin, "Failed to log in , please try again", Snackbar.LENGTH_LONG).show();
 
                     }
@@ -77,8 +77,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    //this method used to set Create account TextView text and click event( maltipal colors
-    // for TextView yet not supported in Xml so i have done it programmatically)
+
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
         textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
@@ -91,7 +90,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    //this method is used to connect XML views to its Objects
+
     private void initViews() {
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -101,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    //This method is for handling fromHtml method deprecation
+
     @SuppressWarnings("deprecation")
     public static Spanned fromHtml(String html) {
         Spanned result;
@@ -113,15 +112,15 @@ public class LoginActivity extends AppCompatActivity {
         return result;
     }
 
-    //This method is used to validate input given by user
+
     public boolean validate() {
         boolean valid = false;
 
-        //Get values from EditText fields
+
         String Email = editTextEmail.getText().toString();
         String Password = editTextPassword.getText().toString();
 
-        //Handling validation for Email field
+
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
             textInputLayoutEmail.setError("Please enter valid email!");
@@ -130,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
             textInputLayoutEmail.setError(null);
         }
 
-        //Handling validation for Password field
+
         if (Password.isEmpty()) {
             valid = false;
             textInputLayoutPassword.setError("Please enter valid password!");

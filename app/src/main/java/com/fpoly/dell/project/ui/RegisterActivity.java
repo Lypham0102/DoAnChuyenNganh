@@ -15,10 +15,6 @@ import com.fpoly.dell.project.database.SqliteHelper;
 import com.fpoly.dell.project.model.User;
 import com.fpoly.dell.project1.R;
 
-/**
-
- */
-
 public class RegisterActivity extends AppCompatActivity {
 
     //Declaration EditTexts
