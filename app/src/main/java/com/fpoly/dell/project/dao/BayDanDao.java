@@ -31,8 +31,8 @@ public class BayDanDao {
         contentValues.put("soBayDan", bayDan.getSoBayDan());
         contentValues.put("soLuongVat",bayDan.getSoLuongVat());
         if (checkPrimaryKey(bayDan.getMaBayDan())){
-                int result = db.update(TABLE_NAME,contentValues,"maBayDan=?", new
-                        String[]{bayDan.getMaBayDan()});
+            int result = db.update(TABLE_NAME,contentValues,"maBayDan=?", new
+                    String[]{bayDan.getMaBayDan()});
             if (result == 0){
                 return -1;
             }

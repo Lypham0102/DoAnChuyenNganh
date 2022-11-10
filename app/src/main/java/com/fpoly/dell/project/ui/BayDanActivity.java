@@ -42,8 +42,8 @@ public class BayDanActivity extends AppCompatActivity {
         lvbaydan = findViewById(R.id.lv_baydan);
         bayDanDao = new BayDanDao(BayDanActivity.this);
 
-        dsbaydan = bayDanDao.getAllBayDan();
 
+        dsbaydan = bayDanDao.getAllBayDan();
         adapter = new BayDanAdapter(dsbaydan, this);
         lvbaydan.setAdapter(adapter);
 

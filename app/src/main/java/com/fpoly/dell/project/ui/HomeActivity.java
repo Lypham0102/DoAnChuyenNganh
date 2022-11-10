@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        setTitle("______Quản Lý Chăn Nuôi_______");
+        setTitle("Quản Lý Chăn Nuôi");
         initView();
 
         chungloai.setOnClickListener(new View.OnClickListener() {
