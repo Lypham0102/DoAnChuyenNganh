@@ -2,9 +2,9 @@ package com.fpoly.dell.project.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -13,11 +13,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.fpoly.dell.project.adapter.BayDanAdapter;
-import com.fpoly.dell.project.adapter.VatNuoiAdapter;
 import com.fpoly.dell.project.dao.BayDanDao;
-import com.fpoly.dell.project.dao.VatNuoiDao;
 import com.fpoly.dell.project.model.BayDan;
-import com.fpoly.dell.project.model.VatNuoi;
 import com.fpoly.dell.project1.R;
 
 import java.util.ArrayList;

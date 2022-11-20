@@ -4,8 +4,8 @@ import static android.R.layout.simple_spinner_item;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,13 +15,9 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.fpoly.dell.project.dao.BayDanDao;
-import com.fpoly.dell.project.dao.ChungLoaiDao;
 import com.fpoly.dell.project.dao.ThucAnDao;
-import com.fpoly.dell.project.dao.VatNuoiDao;
 import com.fpoly.dell.project.model.BayDan;
-import com.fpoly.dell.project.model.ChungLoai;
 import com.fpoly.dell.project.model.ThucAn;
-import com.fpoly.dell.project.model.VatNuoi;
 import com.fpoly.dell.project1.R;
 
 import java.util.ArrayList;

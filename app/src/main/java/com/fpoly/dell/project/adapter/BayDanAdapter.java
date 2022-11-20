@@ -3,7 +3,7 @@ package com.fpoly.dell.project.adapter;
 import android.app.Activity;
 import android.content.Context;;
 import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,10 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fpoly.dell.project.dao.BayDanDao;
-import com.fpoly.dell.project.dao.VatNuoiDao;
 import com.fpoly.dell.project.database.DatabaseHelper;
 import com.fpoly.dell.project.model.BayDan;
-import com.fpoly.dell.project.model.VatNuoi;
 import com.fpoly.dell.project1.R;
 
 import java.util.ArrayList;
