@@ -17,6 +17,7 @@ import java.util.List;
 public class BayDanDao {
     private final SQLiteDatabase db;
     private DatabaseHelper dbHelper;
+
     public static final String TABLE_NAME = "BayDan";
     public static final String SQL_BAYDAN = "CREATE TABLE BayDan (maBayDan text primary key, maThucAn text, soBayDan text, soLuongVat text);";
     private static final String TAG = "BayDanDAO";

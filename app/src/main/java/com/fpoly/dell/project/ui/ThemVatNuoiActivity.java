@@ -115,7 +115,7 @@ public class ThemVatNuoiActivity extends AppCompatActivity {
 
     private int validateForm() {
         int check = 1;
-        if (edMavatnuoi.getText().length() == 0 || edSoluongvatnuoi.getText().length() == 0
+        if (edSoluongvatnuoi.getText().length() == 0
                 || edThucan.getText().length() == 0 || edSuckhoe.getText().length() == 0) {
             Toast.makeText(getApplicationContext(), "Bạn phải nhập đủ thông tin", Toast.LENGTH_SHORT).show();
             check = -1;

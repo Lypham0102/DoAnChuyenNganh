@@ -16,7 +16,7 @@ public class VatNuoiDao {
     private final SQLiteDatabase db;
     private DatabaseHelper dbHelper;
     public static final String TABLE_NAME = "VatNuoi";
-    public static final String SQL_VATNUOI = "CREATE TABLE VatNuoi (maVatNuoi text primary key, maChungLoai text, soLuong text," +
+    public static final String SQL_VATNUOI = "CREATE TABLE VatNuoi (maVatNuoi text primary key , maChungLoai text, soLuong text," +
             "loaiThucAn text, sucKhoe text);";
     private static final String TAG = "VatNuoiDAO";
 

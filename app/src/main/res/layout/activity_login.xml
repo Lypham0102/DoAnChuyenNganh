@@ -61,8 +61,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:background="#62C4C3"
-            android:text="@string/login"
-            android:textColor="@android:color/white" />
+            android:text="Đăng nhập"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/textViewCreateAccount"
@@ -71,32 +71,27 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:gravity="center_horizontal" />
-        <Button
-            android:id="@+id/btnAuthenticate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login With A FingerPrint "
-            android:layout_gravity="center_horizontal"
-            />
+
         <TextView
             android:id="@+id/txt_info"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="App can authenticate using biometrics"/>
+            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/btn_fp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LOGIN FINGERPRINT"
-            android:backgroundTint="@color/teal_200"/>
+            android:textColor="#000000"
+            android:text="Vân tay"
+            android:backgroundTint="@color/teal_700"/>
         <Button
             android:id="@+id/btn_fppin"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LOGIN FINGERPRINT + PIN"
+            android:textColor="#000000"
+            android:text="Vân tay hoặc pin"
             android:backgroundTint="@color/teal_700"/>
 
 

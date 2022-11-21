@@ -147,7 +147,7 @@ public class LoginActivity extends AppCompatActivity {
                 enableButton(false);
                 break;
             case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
-                info = "Biometrics features are currently unavailable";
+                info = "Đăng nhập bằng sinh trắc học";
                 enableButton(false);
                 break;
             case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
@@ -181,7 +181,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void initCreateAccountTextView() {
         TextView textViewCreateAccount = (TextView) findViewById(R.id.textViewCreateAccount);
-        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>I don't have account yet. </font><font color='#0c0099'>create one</font>"));
+        textViewCreateAccount.setText(fromHtml("<font color='#ffffff'>Bạn chưa có tài khoản. </font><font color='#0c0099'>Tạo tài khoản</font>"));
         textViewCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
