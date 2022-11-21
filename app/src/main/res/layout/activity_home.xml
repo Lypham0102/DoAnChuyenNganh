@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#A2D5AB"
+    android:background="#DA021B3C"
     tools:context="com.fpoly.dell.project.ui.HomeActivity">
     <LinearLayout
         android:layout_marginTop="25dp"
@@ -16,9 +16,9 @@
         android:baselineAligned="false">
 
         <LinearLayout
-            android:id="@+id/chungloai"
-            android:layout_weight="1"
+            android:id="@+id/giong"
             android:gravity="center"
+            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -26,16 +26,21 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/chungloai"
+                android:src="@drawable/pig"
                 android:contentDescription="TODO" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title_qlchungloai"
-                android:textSize="18sp"/>
+                android:text="Quản lý giống"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+
+                android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/vatnuoi"
+            android:id="@+id/thucan"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -45,15 +50,18 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/vatnuoi"
+                android:src="@drawable/food"
                 android:contentDescription="TODO" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title_qlvatnuoi"
+                android:text="Quản lý thức ăn"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp"/>
         </LinearLayout>
+
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="25dp"
@@ -63,6 +71,30 @@
         android:orientation="horizontal"
 
         android:baselineAligned="false">
+        <LinearLayout
+            android:id="@+id/trangthietbi"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ttt"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trang thiết bị"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/baydan"
@@ -75,32 +107,14 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/baydan"
+                android:src="@drawable/pigs"
                 android:contentDescription="TODO" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Quản lý bầy đàn"
-                android:textSize="18sp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/thucan"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
-
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/thucpham"
-                android:contentDescription="TODO" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quản lý thức ăn"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>
@@ -114,7 +128,7 @@
 
 
         <LinearLayout
-            android:id="@+id/kinhnghiem"
+            android:id="@+id/ncc"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -124,12 +138,14 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/kinhnghiem"
+                android:src="@drawable/ncc"
                 android:contentDescription="TODO" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tin tức thị trường"
+                android:text="Nhà cung cấp / Đại lý"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 android:textSize="18sp"/>
         </LinearLayout>
         <LinearLayout
@@ -143,12 +159,14 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/chiphi"
+                android:src="@drawable/cash"
                 android:contentDescription="TODO" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Chi phí"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 android:textSize="18sp"/>
         </LinearLayout>
 
@@ -182,8 +200,9 @@
                 android:text="@string/title_thongke"
                 android:textSize="18sp" />
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/checkbaydan"
+            android:id="@+id/vatnuoi"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -193,16 +212,18 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/check"
+                android:src="@drawable/vatnuoi"
                 android:contentDescription="TODO" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Kiểm tra bầy đàn"
+                android:text="@string/title_qlvatnuoi"
                 android:textSize="18sp"/>
         </LinearLayout>
+
 
     </LinearLayout>
 
 </LinearLayout>
+

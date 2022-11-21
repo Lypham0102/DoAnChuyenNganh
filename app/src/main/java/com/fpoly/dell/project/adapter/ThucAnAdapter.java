@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fpoly.dell.project.dao.ThucAnDao;
-import com.fpoly.dell.project.database.DatabaseHelper;
+import com.fpoly.dell.project.dao.database.DatabaseHelper;
 import com.fpoly.dell.project1.R;
 import com.fpoly.dell.project.model.ThucAn;
 

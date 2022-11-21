@@ -1,4 +1,4 @@
-package com.fpoly.dell.project.database;
+package com.fpoly.dell.project.dao.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,8 +7,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.fpoly.dell.project.dao.BayDanDao;
 import com.fpoly.dell.project.dao.ChiPhiDao;
 import com.fpoly.dell.project.dao.ChungLoaiDao;
+import com.fpoly.dell.project.dao.NCCDao;
 import com.fpoly.dell.project.dao.ThucAnDao;
 import com.fpoly.dell.project.dao.VatNuoiDao;
+import com.fpoly.dell.project.dao.GiongDao;
+import com.fpoly.dell.project.dao.TrangThietBiDao;
+import com.fpoly.dell.project.model.NCC;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "dbBookManager";
@@ -25,6 +29,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(ChiPhiDao.SQL_CHIPHI);
         db.execSQL(ThucAnDao.SQL_THUCAN);
         db.execSQL(BayDanDao.SQL_BAYDAN);
+        db.execSQL(GiongDao.SQL_GIONG);
+        db.execSQL(TrangThietBiDao.SQL_TRANGTHIETBI);
+        db.execSQL(NCCDao.SQL_NCC);
     }
 
     @Override
@@ -34,7 +41,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists "+ChiPhiDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ThucAnDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ BayDanDao.TABLE_NAME);
-
+        db.execSQL("Drop table if exists "+ GiongDao.TABLE_NAME);
+        db.execSQL("Drop table if exists "+ TrangThietBiDao.TABLE_NAME);
+        db.execSQL("Drop table if exists "+ NCCDao.TABLE_NAME);
     }
 
 }

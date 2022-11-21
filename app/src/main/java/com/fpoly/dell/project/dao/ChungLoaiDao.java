@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.fpoly.dell.project.database.DatabaseHelper;
+import com.fpoly.dell.project.dao.database.DatabaseHelper;
 import com.fpoly.dell.project.model.ChungLoai;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class ChungLoaiDao {
     private final DatabaseHelper dbHelper;
 
     public static final String TABLE_NAME = "ChungLoai";
-    public static final String SQL_CHUNGLOAI = "CREATE TABLE ChungLoai(machungloai " +
+    public static final String SQL_CHUNGLOAI = "CREATE TABLE ChungLoai(machungloai" +
             "text primary key, tenchungloai text, vitrichuong text);";
     private static final String TAG = "ChungLoaiDao";
 

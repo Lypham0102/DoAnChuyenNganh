@@ -14,7 +14,7 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fpoly.dell.project.database.DatabaseHelper;
+import com.fpoly.dell.project.dao.database.DatabaseHelper;
 import com.fpoly.dell.project1.R;
 import com.fpoly.dell.project.dao.VatNuoiDao;
 import com.fpoly.dell.project.model.VatNuoi;
@@ -79,28 +79,6 @@ public class VatNuoiAdapter extends BaseAdapter implements Filterable {
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                  final Dialog  dialog = new Dialog(context);
-//                    dialog.setContentView(R.layout.dialog_delete);
-//                    dialog.setTitle("Bạn có muốn xóa không ?");
-//                    btnXoa = dialog.findViewById(R.id.btnXoa);
-//                    btnHuy = dialog.findViewById(R.id.btnHuy);
-//                    dialog.show();
-//
-//                    btnXoa.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            vatNuoiDao.deleteVatNuoi(vatNuoiList.get(i).getMavatnuoi());
-//                            vatNuoiList.remove(i);
-//                            notifyDataSetChanged();
-//                            dialog.dismiss();
-//                        }
-//                    });
-//                    btnHuy.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View v) {
-//                            dialog.dismiss();
-//                        }
-//                    });
                     final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setTitle("Xóa");
                     builder.setMessage("Bạn có muốn xóa không?");

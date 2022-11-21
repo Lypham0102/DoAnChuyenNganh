@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.fpoly.dell.project.database.DatabaseHelper;
+import com.fpoly.dell.project.dao.database.DatabaseHelper;
 import com.fpoly.dell.project.model.ChungLoai;
 import com.fpoly.dell.project.model.ThucAn;
 import com.fpoly.dell.project.model.VatNuoi;

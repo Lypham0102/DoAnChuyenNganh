@@ -10,14 +10,17 @@ import com.fpoly.dell.project1.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private LinearLayout chungloai;
+    //private LinearLayout chungloai;
     private LinearLayout vatnuoi;
-    private LinearLayout kinhnghiem;
+    //private LinearLayout kinhnghiem;
     private LinearLayout chiphi;
     private LinearLayout thongke;
     private LinearLayout thucan;
     private LinearLayout baydan;
     private LinearLayout checkbd;
+    private LinearLayout giong;
+    private LinearLayout trangthietbi;
+    private LinearLayout ncc;
 
 
     @Override
@@ -25,16 +28,16 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        setTitle("Quản Lý Chăn Nuôi");
+        setTitle("        QUẢN LÝ TRANG TRẠI");
         initView();
 
-        chungloai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b = new Intent(HomeActivity.this, ChungLoaiActivity.class);
-                startActivity(b);
-            }
-        });
+//        chungloai.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent b = new Intent(HomeActivity.this, ChungLoaiActivity.class);
+//                startActivity(b);
+//            }
+//        });
         vatnuoi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,13 +45,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(b);
             }
         });
-        kinhnghiem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b = new Intent(HomeActivity.this, KinhNghiemActivity.class);
-                startActivity(b);
-            }
-        });
+//        kinhnghiem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent b = new Intent(HomeActivity.this, KinhNghiemActivity.class);
+//                startActivity(b);
+//            }
+//        });
         chiphi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,10 +80,27 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(b);
             }
         });
-        checkbd.setOnClickListener(new View.OnClickListener() {
+
+        giong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent b = new Intent(HomeActivity.this, CheckBDActivity.class);
+                Intent b = new Intent(HomeActivity.this, GiongAcitivity.class);
+                startActivity(b);
+            }
+        });
+
+        trangthietbi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(HomeActivity.this, TrangThietBiActivity.class);
+                startActivity(b);
+            }
+        });
+
+        ncc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(HomeActivity.this, NCCActivity.class);
                 startActivity(b);
             }
         });
@@ -88,13 +108,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        chungloai = (LinearLayout) findViewById(R.id.chungloai);
+        //chungloai = (LinearLayout) findViewById(R.id.chungloai);
         vatnuoi = (LinearLayout) findViewById(R.id.vatnuoi);
         thucan = (LinearLayout) findViewById(R.id.thucan);
-        kinhnghiem = (LinearLayout) findViewById(R.id.kinhnghiem);
+        //kinhnghiem = (LinearLayout) findViewById(R.id.kinhnghiem);
         chiphi = (LinearLayout) findViewById(R.id.chiphi);
         thongke = (LinearLayout) findViewById(R.id.thongke);
         baydan= (LinearLayout) findViewById(R.id.baydan);
-        checkbd= (LinearLayout) findViewById(R.id.checkbaydan);
+
+        giong= (LinearLayout) findViewById(R.id.giong);
+        trangthietbi = (LinearLayout) findViewById(R.id.trangthietbi);
+        ncc = (LinearLayout) findViewById(R.id.ncc);
     }
 }
