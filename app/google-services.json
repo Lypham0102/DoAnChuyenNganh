@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "423165376147",
+    "firebase_url": "https://esp8266-database-inventor-default-rtdb.firebaseio.com",
+    "project_id": "esp8266-database-inventor",
+    "storage_bucket": "esp8266-database-inventor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423165376147:android:6e9284d6f1d4bc3d5bff66",
+        "android_client_info": {
+          "package_name": "com.fpoly.dell.project1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423165376147-vbcjghocblck10vr345ns0micuv6vsgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHO74leCOB-27oExxJ5j9hrmFtjDM-VXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423165376147-vbcjghocblck10vr345ns0micuv6vsgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

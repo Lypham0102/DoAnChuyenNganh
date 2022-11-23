@@ -41,6 +41,6 @@ public class NCC {
      }
     @Override
     public String toString() {
-        return getMaNCC()+" | "+getTenNCC()+" | "+getDiaChi()+" | "+getSdt();
+        return getTenNCC()+" | "+getDiaChi();
     }
 }

@@ -6,13 +6,21 @@ public class ThucAn {
     private String Maloai;
     private String Soluong;
     private String Dongia;
+
+
+
+    private String Mancc;
+
+
+
     public ThucAn(){}
-    public ThucAn(String mathucan, String Tenthucan, String Maloai, String Soluong, String Dongia) {
+    public ThucAn(String mathucan, String Tenthucan, String Maloai, String Soluong, String Dongia, String Mancc) {
         this.mathucan = mathucan;
         this.Tenthucan = Tenthucan;
         this.Maloai = Maloai;
         this.Soluong = Soluong;
         this.Dongia = Dongia;
+        this.Mancc = Mancc;
     }
 
     public String getMathucan() {
@@ -55,8 +63,12 @@ public class ThucAn {
         this.Dongia = dongia;
     }
 
+    public void setMancc(String mancc) {Mancc = mancc;}
+
+    public String getMancc() {return Mancc;}
+
     @Override
     public String toString() {
-        return getMathucan()+" | "+getTenthucan()+" | "+getMaloai();
+        return getTenthucan()+" | "+getMaloai()+" | "+getSoluong();
     }
 }

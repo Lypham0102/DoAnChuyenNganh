@@ -17,7 +17,7 @@ public class TrangThietBiDao {
     private final SQLiteDatabase db;
     private DatabaseHelper dbHelper;
     public static final String TABLE_NAME = "TrangThietBi";
-    public static final String SQL_TRANGTHIETBI = "CREATE TABLE TrangThietBi (maTrangThietBi text primary key , tenTrangThietBi text, giaTTT text)";
+    public static final String SQL_TRANGTHIETBI = "CREATE TABLE TrangThietBi (maTrangThietBi text primary key , tenTrangThietBi text, giaTTT text, maNCC text)";
     private static final String TAG = "TrangThietBiDAO";
 
     public TrangThietBiDao(Context context) {
@@ -30,6 +30,7 @@ public class TrangThietBiDao {
         contentValues.put("maTrangThietBi",trangThietBi.getMaTrangThietBi());
         contentValues.put("tenTrangThietBi", trangThietBi.getTenTrangThietBi());
         contentValues.put("giaTTT",trangThietBi.getGiaTTT());
+        contentValues.put("maNCC",trangThietBi.getMaNhaCungCap());
         if (checkPrimaryKey(trangThietBi.getMaTrangThietBi())){
             int result = db.update(TABLE_NAME,contentValues,"maTrangThietBi=?", new
                     String[]{trangThietBi.getMaTrangThietBi()});
@@ -80,6 +81,7 @@ public class TrangThietBiDao {
             s.setMaTrangThietBi(c.getString(0));
             s.setTenTrangThietBi(c.getString(1));
             s.setGiaTTT(c.getString(2));
+            s.setMaNhaCungCap(c.getString(3));
             dsSach.add(s);
             Log.d("//=====",s.toString());
             c.moveToNext();

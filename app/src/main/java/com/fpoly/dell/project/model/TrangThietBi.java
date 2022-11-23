@@ -25,17 +25,29 @@ public class TrangThietBi {
         GiaTTT = giaTTT;
     }
 
-    private String MaTrangThietBi;
+    public void setMaNhaCungCap(String maNhaCungCap) {MaNhaCungCap = maNhaCungCap;}
+
     private String TenTrangThietBi;
+
+    private String MaTrangThietBi;
+
+
+
+
     private String GiaTTT;
+
+    public String getMaNhaCungCap() {return MaNhaCungCap;}
+
+    private String MaNhaCungCap;
 
     public TrangThietBi(){
     };
 
-    public TrangThietBi(String maTrangThietBi, String tenTrangThietBi, String giaTTT){
+    public TrangThietBi(String maTrangThietBi, String tenTrangThietBi, String giaTTT, String maNhaCungCap){
         MaTrangThietBi= maTrangThietBi;
         TenTrangThietBi = tenTrangThietBi;
         GiaTTT = giaTTT;
+        MaNhaCungCap = maNhaCungCap;
     }
 
     @Override

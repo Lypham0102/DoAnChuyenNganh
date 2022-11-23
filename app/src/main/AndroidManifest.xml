@@ -90,6 +90,9 @@
         <activity
             android:name="com.fpoly.dell.project.ui.ThemNCCActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.NCCActivity" />
+        <activity
+            android:name="com.fpoly.dell.project.ui.DoActivity"
+            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
     </application>
 
 </manifest>

@@ -14,9 +14,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.fpoly.dell.project.dao.ChungLoaiDao;
+import com.fpoly.dell.project.dao.NCCDao;
 import com.fpoly.dell.project.dao.TrangThietBiDao;
 import com.fpoly.dell.project.dao.VatNuoiDao;
 import com.fpoly.dell.project.model.ChungLoai;
+import com.fpoly.dell.project.model.NCC;
 import com.fpoly.dell.project.model.TrangThietBi;
 import com.fpoly.dell.project.model.VatNuoi;
 import com.fpoly.dell.project1.R;
@@ -25,16 +27,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ThemTrangThietBiActivity extends AppCompatActivity {
-    //private Spinner spVatnuoi;
+    private Spinner spNcc;
     private EditText edMatrangthietbi;
     private EditText edTentrangthietbi;
     private EditText edGiaTTT;
 
 
     private TrangThietBiDao trangThietBiDao;
-    //private ChungLoaiDao chungLoaiDao;
-    //private String maChungLoai = "";
-    //private List<ChungLoai> chungLoaiList = new ArrayList<>();
+    private NCCDao nccDao;
+    private String maNCC = "";
+    private List<NCC> nccList = new ArrayList<>();
     //private EditText edMavatnuoi;
 
     @Override
@@ -49,51 +51,52 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
         edMatrangthietbi = (EditText) findViewById(R.id.ed_matrangthietbi);
         edTentrangthietbi = (EditText) findViewById(R.id.ed_tentrangthietbi);
         edGiaTTT = (EditText) findViewById(R.id.ed_giattt);
+        spNcc = (Spinner) findViewById(R.id.sp_Ncc);
+        getNCC();
+        spNcc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-//        spVatnuoi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//
-//                maChungLoai =
-//                        chungLoaiList.get(spVatnuoi.getSelectedItemPosition()).getTenvatnuoi();
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
+                maNCC =
+                        nccList.get(spNcc.getSelectedItemPosition()).getTenNCC();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         //load data into form
         Intent in = getIntent();
         Bundle b = in.getExtras();
         if (b != null) {
             edMatrangthietbi.setText(b.getString("MATRANGTHIETBI"));
-            //String maChungLoai = b.getString("MACHUNGLOAI");
+            String maNCC = b.getString("MANCC");
             edTentrangthietbi.setText(b.getString("TENTRANGTHIETBI"));
             edGiaTTT.setText(b.getString("GIATTT"));
 //            edSuckhoe.setText(b.getString("SUCKHOE"));
 //
-//            spVatnuoi.setSelection(checkPositionTheLoai(maChungLoai));
+            spNcc.setSelection(checkPositionTheLoai(maNCC));
         }
 
 
     }
 
-//    private void getTrangThietBi() {
-//        chungLoaiDao = new ChungLoaiDao(ThemVatNuoiActivity.this);
-//        chungLoaiList = chungLoaiDao.getAllChungLoai();
-//        ArrayAdapter<ChungLoai> dataAdapter = new ArrayAdapter<>(this,
-//                android.R.layout.simple_spinner_item, chungLoaiList);
-//        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spVatnuoi.setAdapter(dataAdapter);
-//    }
+    private void getNCC() {
+        nccDao = new NCCDao(ThemTrangThietBiActivity.this);
+        nccList = nccDao.getAllNCC();
+        ArrayAdapter<NCC> dataAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, nccList);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spNcc.setAdapter(dataAdapter);
+    }
 
     public void add(View view) {
         trangThietBiDao = new TrangThietBiDao(ThemTrangThietBiActivity.this);
         TrangThietBi trangThietBi = new
                 TrangThietBi(edMatrangthietbi.getText().toString(), edTentrangthietbi.getText().toString(),
-                edGiaTTT.getText().toString());
+                edGiaTTT.getText().toString(),maNCC);
         try {
             if (validateForm() > 0) {
                 if (trangThietBiDao.insertTrangThietBi(trangThietBi) > 0) {
@@ -128,12 +131,12 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
         finish();
     }
 
-//    public int checkPositionTheLoai(String strTheLoai) {
-//        for (int i = 0; i < chungLoaiList.size(); i++) {
-//            if (strTheLoai.equals(chungLoaiList.get(i).getMachungloai())) {
-//                return i;
-//            }
-//        }
-//        return 0;
-//    }
+    public int checkPositionTheLoai(String strTheLoai) {
+        for (int i = 0; i < nccList.size(); i++) {
+            if (strTheLoai.equals(nccList.get(i).getMaNCC())) {
+                return i;
+            }
+        }
+        return 0;
+    }
 }

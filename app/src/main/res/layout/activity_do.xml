@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <TextView
+        android:id="@+id/textViewTheoDoiNhiet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        android:text="            Theo dõi không khí"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/nhietdo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/textViewTheoDoiNhiet"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/nhietdo1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/nhietdo">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_nhiet1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/nhietdo1"
+            android:text="Nhiệt độ"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/text_Nhiet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:layout_toRightOf="@+id/nhietdo1"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold|italic"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/doam"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/nhietdo"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:id="@+id/doam1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/doam">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_do1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/doam1"
+            android:text="Độ ẩm"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/text_Do"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+
+            android:layout_toRightOf="@+id/doam1"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/khigas"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/doam"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/khigas1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/gas">
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_gas1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/khigas1"
+            android:text="Khí gas"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/text_Gas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:layout_toRightOf="@+id/khigas1"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</RelativeLayout>

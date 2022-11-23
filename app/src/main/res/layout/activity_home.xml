@@ -191,18 +191,20 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/thongke"
+                android:src="@drawable/thongkee"
                 android:contentDescription="TODO" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title_thongke"
-                android:textSize="18sp" />
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/vatnuoi"
+            android:id="@+id/nhietdogas"
             android:gravity="center"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -212,13 +214,15 @@
 
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/vatnuoi"
+                android:src="@drawable/nhietdo"
                 android:contentDescription="TODO" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title_qlvatnuoi"
+                android:text="Theo dõi không khí"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 android:textSize="18sp"/>
         </LinearLayout>
 

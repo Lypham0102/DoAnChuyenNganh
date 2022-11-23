@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.fpoly.dell.project1.R;
 
@@ -21,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout giong;
     private LinearLayout trangthietbi;
     private LinearLayout ncc;
+    private LinearLayout nhietdogas;
 
 
     @Override
@@ -38,13 +40,13 @@ public class HomeActivity extends AppCompatActivity {
 //                startActivity(b);
 //            }
 //        });
-        vatnuoi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent b = new Intent(HomeActivity.this, VatNuoiActivity.class);
-                startActivity(b);
-            }
-        });
+//        vatnuoi.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent b = new Intent(HomeActivity.this, VatNuoiActivity.class);
+//                startActivity(b);
+//            }
+//        });
 //        kinhnghiem.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -104,12 +106,19 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(b);
             }
         });
+        nhietdogas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent b = new Intent(HomeActivity.this, DoActivity.class);
+                startActivity(b);
+            }
+        });
 
     }
 
     private void initView() {
         //chungloai = (LinearLayout) findViewById(R.id.chungloai);
-        vatnuoi = (LinearLayout) findViewById(R.id.vatnuoi);
+        //vatnuoi = (LinearLayout) findViewById(R.id.vatnuoi);
         thucan = (LinearLayout) findViewById(R.id.thucan);
         //kinhnghiem = (LinearLayout) findViewById(R.id.kinhnghiem);
         chiphi = (LinearLayout) findViewById(R.id.chiphi);
@@ -119,5 +128,6 @@ public class HomeActivity extends AppCompatActivity {
         giong= (LinearLayout) findViewById(R.id.giong);
         trangthietbi = (LinearLayout) findViewById(R.id.trangthietbi);
         ncc = (LinearLayout) findViewById(R.id.ncc);
+        nhietdogas = (LinearLayout) findViewById(R.id.nhietdogas);
     }
 }
