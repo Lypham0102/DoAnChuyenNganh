@@ -114,7 +114,7 @@ public class TrangThietBiAdapter extends BaseAdapter implements Filterable {
             holder = (TrangThietBiAdapter.ViewHolder) convertView.getTag();
         TrangThietBi entry = trangThietBiList.get(i);
         holder.img.setImageResource(R.drawable.vatnuoi1);
-        holder.txtMaTrangThietBi.setText("Mã trang thiết bị: " + entry.getMaTrangThietBi());
+        holder.txtMaTrangThietBi.setText("Mã trang thiết bị: " + entry.getMaNhaCungCap());
         holder.txtTenTrangThietBi.setText("Tên trang thiết bị: " + entry.getTenTrangThietBi());
         holder.txtGiaTTT.setText("Đơn giá: " + entry.getGiaTTT());
         return convertView;
@@ -144,7 +144,7 @@ public class TrangThietBiAdapter extends BaseAdapter implements Filterable {
                 List<TrangThietBi> lsHoaDon = new ArrayList<>();
                 for (TrangThietBi p : trangThietBiList) {
                     if
-                    (p.getMaTrangThietBi().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getMaNhaCungCap().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;

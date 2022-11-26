@@ -27,16 +27,13 @@ public class TrangThietBi {
 
     public void setMaNhaCungCap(String maNhaCungCap) {MaNhaCungCap = maNhaCungCap;}
 
+    public String getMaNhaCungCap() {return MaNhaCungCap;}
+
     private String TenTrangThietBi;
 
     private String MaTrangThietBi;
 
-
-
-
     private String GiaTTT;
-
-    public String getMaNhaCungCap() {return MaNhaCungCap;}
 
     private String MaNhaCungCap;
 

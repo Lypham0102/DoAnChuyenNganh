@@ -35,7 +35,7 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
 
     private TrangThietBiDao trangThietBiDao;
     private NCCDao nccDao;
-    private String maNCC = "";
+    private String maNhacungcap = "";
     private List<NCC> nccList = new ArrayList<>();
     //private EditText edMavatnuoi;
 
@@ -52,12 +52,12 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
         edTentrangthietbi = (EditText) findViewById(R.id.ed_tentrangthietbi);
         edGiaTTT = (EditText) findViewById(R.id.ed_giattt);
         spNcc = (Spinner) findViewById(R.id.sp_Ncc);
-        getNCC();
+        getTTT();
         spNcc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                maNCC =
+                maNhacungcap =
                         nccList.get(spNcc.getSelectedItemPosition()).getTenNCC();
             }
 
@@ -72,18 +72,18 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
         Bundle b = in.getExtras();
         if (b != null) {
             edMatrangthietbi.setText(b.getString("MATRANGTHIETBI"));
-            String maNCC = b.getString("MANCC");
+            String maNhaCungCap = b.getString("MANHACUNGCAP");
             edTentrangthietbi.setText(b.getString("TENTRANGTHIETBI"));
             edGiaTTT.setText(b.getString("GIATTT"));
 //            edSuckhoe.setText(b.getString("SUCKHOE"));
 //
-            spNcc.setSelection(checkPositionTheLoai(maNCC));
+            spNcc.setSelection(checkPositionTheLoai(maNhaCungCap));
         }
 
 
     }
 
-    private void getNCC() {
+    private void getTTT() {
         nccDao = new NCCDao(ThemTrangThietBiActivity.this);
         nccList = nccDao.getAllNCC();
         ArrayAdapter<NCC> dataAdapter = new ArrayAdapter<>(this,
@@ -96,7 +96,7 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
         trangThietBiDao = new TrangThietBiDao(ThemTrangThietBiActivity.this);
         TrangThietBi trangThietBi = new
                 TrangThietBi(edMatrangthietbi.getText().toString(), edTentrangthietbi.getText().toString(),
-                edGiaTTT.getText().toString(),maNCC);
+                edGiaTTT.getText().toString(),maNhacungcap);
         try {
             if (validateForm() > 0) {
                 if (trangThietBiDao.insertTrangThietBi(trangThietBi) > 0) {
