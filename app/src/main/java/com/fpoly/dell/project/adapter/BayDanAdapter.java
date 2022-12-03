@@ -107,7 +107,7 @@ public class BayDanAdapter extends BaseAdapter implements Filterable{
         } else
             holder = (BayDanAdapter.ViewHolder) convertView.getTag();
         BayDan entry = bayDanList.get(i);
-        holder.img.setImageResource(R.drawable.vatnuoi1);
+        holder.img.setImageResource(R.drawable.pigsss);
         holder.txtMaBayDan.setText("Mã: " + entry.getMaBayDan());
         holder.txtSoBayDan.setText("Số chuồng: " + entry.getSoBayDan());
         holder.txtSoLuongVat.setText("Số lượng: " + entry.getSoLuongVat());

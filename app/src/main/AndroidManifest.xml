@@ -25,21 +25,6 @@
             android:name="com.fpoly.dell.project.ui.HomeActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.LoginActivity" />
         <activity
-            android:name="com.fpoly.dell.project.ui.ChungLoaiActivity"
-            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
-        <activity
-            android:name="com.fpoly.dell.project.ui.VatNuoiActivity"
-            android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
-        <activity
-            android:name="com.fpoly.dell.project.ui.ChiTietChungLoaiActivity"
-            android:parentActivityName="com.fpoly.dell.project.ui.ChungLoaiActivity" />
-        <activity
-            android:name="com.fpoly.dell.project.ui.ThemChungLoaiActivity"
-            android:parentActivityName="com.fpoly.dell.project.ui.ChungLoaiActivity" />
-        <activity
-            android:name="com.fpoly.dell.project.ui.ThemVatNuoiActivity"
-            android:parentActivityName="com.fpoly.dell.project.ui.VatNuoiActivity" />
-        <activity
             android:name="com.fpoly.dell.project.ui.KinhNghiemActivity"
             android:parentActivityName="com.fpoly.dell.project.ui.HomeActivity" />
         <activity

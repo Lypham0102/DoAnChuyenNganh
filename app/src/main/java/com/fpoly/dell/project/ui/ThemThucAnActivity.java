@@ -12,10 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.fpoly.dell.project.dao.ChungLoaiDao;
 import com.fpoly.dell.project.dao.NCCDao;
 import com.fpoly.dell.project.dao.ThucAnDao;
-import com.fpoly.dell.project.model.ChungLoai;
 import com.fpoly.dell.project.model.NCC;
 import com.fpoly.dell.project.model.ThucAn;
 import com.fpoly.dell.project1.R;

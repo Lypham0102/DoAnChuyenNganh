@@ -113,7 +113,7 @@ public class NCCAdapter extends BaseAdapter implements Filterable {
         } else
             holder = (NCCAdapter.ViewHolder) convertView.getTag();
         NCC entry = nccList.get(i);
-        holder.img.setImageResource(R.drawable.vatnuoi1);
+        holder.img.setImageResource(R.drawable.deli);
         holder.txtMaNCC.setText("Mã nhà cung cấp: " + entry.getMaNCC());
         holder.txtTenNCC.setText("Tên nhà cung cấp: " + entry.getTenNCC());
         holder.txtDiaChi.setText("Địa chỉ: " + entry.getDiaChi());

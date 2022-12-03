@@ -13,14 +13,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fpoly.dell.project.dao.ChungLoaiDao;
 import com.fpoly.dell.project.dao.NCCDao;
 import com.fpoly.dell.project.dao.TrangThietBiDao;
-import com.fpoly.dell.project.dao.VatNuoiDao;
-import com.fpoly.dell.project.model.ChungLoai;
 import com.fpoly.dell.project.model.NCC;
 import com.fpoly.dell.project.model.TrangThietBi;
-import com.fpoly.dell.project.model.VatNuoi;
 import com.fpoly.dell.project1.R;
 
 import java.util.ArrayList;

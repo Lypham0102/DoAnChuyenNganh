@@ -47,10 +47,24 @@
             android:id="@+id/text_Nhiet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/nhietdo1"
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"/>
+        <TextView
+            android:id="@+id/nhietdooo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/nhietdo1"
+            android:textColor="#000000"
+            android:text="°C"
+            android:textSize="25dp"
             android:textStyle="bold|italic"/>
     </RelativeLayout>
     <RelativeLayout
@@ -82,12 +96,25 @@
             android:id="@+id/text_Do"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="150dp"
-
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="30dp"
             android:layout_toRightOf="@+id/doam1"
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="25dp"
             android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/doammm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/doam1"
+            android:textColor="#000000"
+            android:text="%"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -121,10 +148,24 @@
             android:id="@+id/text_Gas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="80dp"
             android:layout_toRightOf="@+id/khigas1"
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="25dp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/gass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="220dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/khigas1"
+            android:textColor="#000000"
+            android:text="PPM"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"/>
     </RelativeLayout>
 </RelativeLayout>
