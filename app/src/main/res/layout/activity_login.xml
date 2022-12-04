@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#519383"
+    android:background="#DA021B3C"
     android:fitsSystemWindows="true">
 
     <LinearLayout
@@ -12,15 +12,16 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="266dp"
-            android:layout_height="60dp"
+            android:layout_width="321dp"
+            android:layout_height="212dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="16dp"
-            android:src="@drawable/projectnotes" />
+            android:src="@drawable/barn" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEmail"
@@ -34,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
+                android:textColor="#FFFFFF"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
+                android:textColor="#FFFFFF"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,22 +80,23 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/btn_fp"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:text="Vân tay"
-            android:backgroundTint="@color/teal_700"/>
-        <Button
+<!--        <Button-->
+<!--            android:id="@+id/btn_fp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#000000"-->
+<!--            android:text="Vân tay"-->
+<!--            android:backgroundTint="@color/teal_700"/>-->
+        <ImageButton
             android:id="@+id/btn_fppin"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
+            android:src="@drawable/fc"
             android:text="Vân tay hoặc pin"
-            android:backgroundTint="@color/teal_700"/>
+            android:backgroundTint="#DA021B3C"/>
 
 
 

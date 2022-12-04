@@ -17,6 +17,7 @@ import android.text.Spanned;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
 
     SqliteHelper sqliteHelper;
 
-    Button btn_fp,btn_fppin;
+    ImageButton btn_fp,btn_fppin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         sqliteHelper = new SqliteHelper(this);
         initCreateAccountTextView();
         initViews();
-        btn_fp = findViewById(R.id.btn_fp);
+        //btn_fp = findViewById(R.id.btn_fp);
         btn_fppin = findViewById(R.id.btn_fppin);
 
         checkBioMetricSupported();
@@ -112,11 +113,11 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-        btn_fp.setOnClickListener(view -> {
-            androidx.biometric.BiometricPrompt.PromptInfo.Builder promtInfo = dialogMetric();
-            promtInfo.setNegativeButtonText("Cancel");
-            biometricPrompt.authenticate(promtInfo.build());
-        });
+//        btn_fp.setOnClickListener(view -> {
+//            androidx.biometric.BiometricPrompt.PromptInfo.Builder promtInfo = dialogMetric();
+//            promtInfo.setNegativeButtonText("Cancel");
+//            biometricPrompt.authenticate(promtInfo.build());
+//        });
         //for button fingerprint or pattern or pin
         btn_fppin.setOnClickListener(view -> {
             androidx.biometric.BiometricPrompt.PromptInfo.Builder promtInfo = dialogMetric();
@@ -163,7 +164,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     void enableButton(boolean enable){
-        btn_fp.setEnabled(enable);
+        //btn_fp.setEnabled(enable);
         btn_fppin.setEnabled(true);
 
     }
