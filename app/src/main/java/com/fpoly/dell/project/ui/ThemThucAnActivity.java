@@ -78,11 +78,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
             edDongia.setText(b.getString("DONGIA"));
             //spNCC.setSelection(checkPositionNhaCC(Mancc));
         }
-
-
     }
-
-
 
     private void getNCC() {
         nccDao = new NCCDao(ThemThucAnActivity.this);

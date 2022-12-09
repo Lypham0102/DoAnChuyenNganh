@@ -7,20 +7,29 @@ public class ThucAn {
     private String Soluong;
     private String Dongia;
 
+    public String getMaNhaCungCap() {
+        return MaNhaCungCap;
+    }
+
+    public void setMaNhaCungCap(String maNhaCungCap) {
+        MaNhaCungCap = maNhaCungCap;
+    }
+
+    private String MaNhaCungCap;
 
 
-    private String Mancc;
+    //private String Mancc;
 
 
 
     public ThucAn(){}
-    public ThucAn(String mathucan, String Tenthucan, String Maloai, String Soluong, String Dongia, String Mancc) {
+    public ThucAn(String mathucan, String Tenthucan, String Maloai, String Soluong, String Dongia, String maNhaCungCap) {
         this.mathucan = mathucan;
         this.Tenthucan = Tenthucan;
         this.Maloai = Maloai;
         this.Soluong = Soluong;
         this.Dongia = Dongia;
-        this.Mancc = Mancc;
+        this.MaNhaCungCap = maNhaCungCap;
     }
 
     public String getMathucan() {
@@ -63,9 +72,9 @@ public class ThucAn {
         this.Dongia = dongia;
     }
 
-    public void setMancc(String mancc) {Mancc = mancc;}
+    //public void setMancc(String mancc) {Mancc = mancc;}
 
-    public String getMancc() {return Mancc;}
+    //public String getMancc() {return Mancc;}
 
     @Override
     public String toString() {

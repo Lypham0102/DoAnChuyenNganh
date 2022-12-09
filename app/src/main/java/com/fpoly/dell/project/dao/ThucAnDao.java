@@ -33,6 +33,7 @@ public class ThucAnDao {
         contentValues.put("Maloai",thucAn.getMaloai());
         contentValues.put("Soluong",thucAn.getSoluong());
         contentValues.put("Dongia",thucAn.getDongia());
+        //contentValues.put("maNhaCungCap",thucAn.getMaNhaCungCap());
         if (checkPrimaryKey(thucAn.getMathucan())){
             int result = db.update(TABLE_NAME,contentValues,"mathucan=?", new
                     String[]{thucAn.getMathucan()});
@@ -63,7 +64,7 @@ public class ThucAnDao {
             s.setMaloai(c.getString(2));
             s.setSoluong(c.getString(3));
             s.setDongia(c.getString(4));
-
+            //s.setMaNhaCungCap(c.getString(5));
             dsSachh.add(s);
             Log.d("//=====",s.toString());
             c.moveToNext();
@@ -74,9 +75,9 @@ public class ThucAnDao {
 
     private boolean checkPrimaryKey(String strPrimaryKey){
         //SELECT
-        String[] columns = {"maThucAn"};
+        String[] columns = {"mathucan"};
         //WHERE clause
-        String selection = "maThucAn=?";
+        String selection = "mathucan=?";
         //WHERE clause arguments
         String[] selectionArgs = {strPrimaryKey};
         Cursor c = null;
@@ -95,8 +96,8 @@ public class ThucAnDao {
             return false;
         }
     }
-    public int deleteThucAn(String maThucAn){
-        int result = db.delete(TABLE_NAME,"maThucAn=?",new String[]{maThucAn});
+    public int deleteThucAn(String mathucan){
+        int result = db.delete(TABLE_NAME,"mathucan=?",new String[]{mathucan});
         if (result == 0)
             return -1;
         return 1;
@@ -107,7 +108,7 @@ public class ThucAnDao {
         values.put("Soluong", Soluong);
         values.put("Dongia", Dongia);
 
-        int result = db.update(TABLE_NAME, values, "maThucAn=?", new
+        int result = db.update(TABLE_NAME, values, "mathucan=?", new
                 String[]{maThucAn});
         if (result == 0) {
             return -1;

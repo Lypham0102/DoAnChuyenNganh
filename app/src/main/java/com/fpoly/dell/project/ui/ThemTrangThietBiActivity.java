@@ -73,7 +73,7 @@ public class ThemTrangThietBiActivity extends AppCompatActivity {
             edGiaTTT.setText(b.getString("GIATTT"));
 //            edSuckhoe.setText(b.getString("SUCKHOE"));
 //
-            spNcc.setSelection(checkPositionTheLoai(maNhaCungCap));
+            //spNcc.setSelection(checkPositionTheLoai(maNhaCungCap));
         }
 
 

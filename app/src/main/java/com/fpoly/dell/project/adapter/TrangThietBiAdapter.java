@@ -114,7 +114,7 @@ public class TrangThietBiAdapter extends BaseAdapter implements Filterable {
             holder = (TrangThietBiAdapter.ViewHolder) convertView.getTag();
         TrangThietBi entry = trangThietBiList.get(i);
         holder.img.setImageResource(R.drawable.trangtt);
-        holder.txtMaTrangThietBi.setText("Mã trang thiết bị: " + entry.getMaNhaCungCap());
+        holder.txtMaTrangThietBi.setText("Nhà cung cấp: " + entry.getMaNhaCungCap());
         holder.txtTenTrangThietBi.setText("Tên trang thiết bị: " + entry.getTenTrangThietBi());
         holder.txtGiaTTT.setText("Đơn giá: " + entry.getGiaTTT());
         return convertView;

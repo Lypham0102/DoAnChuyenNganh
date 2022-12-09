@@ -152,7 +152,6 @@ public class GiongAdapter extends BaseAdapter implements Filterable {
         @Override
         protected void publishResults(CharSequence constraint,
                                       FilterResults results) {
-// Now we have to inform the adapter about the new list filtered
             if (results.count == 0)
                 notifyDataSetInvalidated();
             else {
