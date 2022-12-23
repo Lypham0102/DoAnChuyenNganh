@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#E2EAB8">
     <TextView
         android:id="@+id/textViewTheoDoiNhiet"
         android:layout_width="wrap_content"

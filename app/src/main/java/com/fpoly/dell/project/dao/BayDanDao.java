@@ -28,8 +28,9 @@ public class BayDanDao {
     public int insertBayDan(BayDan bayDan){
         ContentValues contentValues = new ContentValues();
         contentValues.put("maBayDan",bayDan.getMaBayDan());
-        contentValues.put("maThucAn",bayDan.getMaThucAn());
+        //contentValues.put("maThucAn",bayDan.getMaThucAn());
         contentValues.put("soBayDan", bayDan.getSoBayDan());
+        contentValues.put("maThucAn",bayDan.getMaThucAn());
         contentValues.put("soLuongVat",bayDan.getSoLuongVat());
         if (checkPrimaryKey(bayDan.getMaBayDan())){
             int result = db.update(TABLE_NAME,contentValues,"maBayDan=?", new
@@ -46,6 +47,7 @@ public class BayDanDao {
                 Log.e(TAG, ex.toString());
             }
         }
+
         return 1;
     }
 
@@ -74,7 +76,7 @@ public class BayDanDao {
         String[] columns = {"maBayDan"};
 
         //WHERE clause
-        String selection = "maBayDa =?";
+        String selection = "maBayDan =?";
         //WHERE clause arguments
         String[] selectionArgs = {strPrimaryKey};
         Cursor c = null;

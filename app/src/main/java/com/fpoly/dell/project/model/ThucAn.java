@@ -1,26 +1,14 @@
 package com.fpoly.dell.project.model;
 
+import java.util.Random;
+
 public class ThucAn {
     private String mathucan;
     private String Tenthucan;
     private String Maloai;
     private String Soluong;
     private String Dongia;
-
-    public String getMaNhaCungCap() {
-        return MaNhaCungCap;
-    }
-
-    public void setMaNhaCungCap(String maNhaCungCap) {
-        MaNhaCungCap = maNhaCungCap;
-    }
-
     private String MaNhaCungCap;
-
-
-    //private String Mancc;
-
-
 
     public ThucAn(){}
     public ThucAn(String mathucan, String Tenthucan, String Maloai, String Soluong, String Dongia, String maNhaCungCap) {
@@ -72,12 +60,18 @@ public class ThucAn {
         this.Dongia = dongia;
     }
 
+    public String getMaNhaCungCap() {return MaNhaCungCap;}
+
+    public void setMaNhaCungCap(String maNhaCungCap) {MaNhaCungCap = maNhaCungCap;}
+
+
     //public void setMancc(String mancc) {Mancc = mancc;}
 
     //public String getMancc() {return Mancc;}
 
+
     @Override
     public String toString() {
-        return getTenthucan()+" | "+getMaloai()+" | "+getSoluong();
+        return "Tên cám: "+ getTenthucan()+" | "+" Mã loại cám: "+getMaloai();
     }
 }

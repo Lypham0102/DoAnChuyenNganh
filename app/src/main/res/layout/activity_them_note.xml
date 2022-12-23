@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="5dp"
     android:background="#E2EAB8"
-    android:padding="5dp">
+    tools:context="com.fpoly.dell.project.ui.ThemNoteActivity">
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
@@ -29,81 +29,102 @@
             android:orientation="vertical"
             android:layout_marginTop="40dp">
 
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="16dp"
                 app:counterEnabled="true"
-                app:counterMaxLength="5">
+                app:counterMaxLength="7">
 
                 <EditText
-                    android:id="@+id/ed_magiong"
+                    android:id="@+id/edtManote"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Mã giống"
-                    android:maxLength="5" />
+                    android:hint="Mã note"
+                    android:imeActionId="6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:maxLength="100"
+                    android:id="@+id/edtTennote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tên note"
+                    android:imeActionId="6"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:singleLine="true" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 app:counterEnabled="true"
-                app:counterMaxLength="50">
+                app:counterMaxLength="1000"
+                android:layout_marginTop="16dp">
 
                 <EditText
-                    android:id="@+id/ed_tengiong"
+                    android:maxLength="3000"
+                    android:id="@+id/edtNoiDung"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tên giống"
-                    android:maxLength="50" />
+                    android:hint="Nội dung"
+                    android:imeActionId="6"
+                    android:imeOptions="actionDone"
+
+                    android:maxLines="100"
+                    android:singleLine="true" />
+
             </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:counterEnabled="true"
-                app:counterMaxLength="50">
-
-                <EditText
-                    android:id="@+id/ed_xuatxu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Xuất xứ"
-                    android:maxLength="50" />
-            </com.google.android.material.textfield.TextInputLayout>
-
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
-
-
+                android:orientation="horizontal">
 
                 <Button
                     android:background="@drawable/button"
+                    android:id="@+id/btnHuy"
+                    style="?android:textAppearanceSmall"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="16dp"
                     android:layout_weight="1"
-                    android:onClick="Cancel"
                     android:text="@string/Cancel"
-                    android:textAllCaps="false" />
+                    android:textStyle="bold" />
+
                 <Button
+                    android:background="@drawable/button"
+                    android:id="@+id/btnAdd"
+                    style="?android:textAppearanceSmall"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="16dp"
                     android:layout_weight="1"
-                    android:background="@drawable/button"
                     android:onClick="add"
                     android:text="@string/them"
-                    android:textAllCaps="false" />
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+
 </LinearLayout>

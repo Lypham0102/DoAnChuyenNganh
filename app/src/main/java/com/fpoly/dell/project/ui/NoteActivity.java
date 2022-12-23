@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -12,61 +13,64 @@ import android.widget.ListView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fpoly.dell.project.adapter.GiongAdapter;
-import com.fpoly.dell.project.adapter.VatNuoiAdapter;
-import com.fpoly.dell.project.dao.GiongDao;
-import com.fpoly.dell.project.dao.VatNuoiDao;
-import com.fpoly.dell.project.model.Giong;
-import com.fpoly.dell.project.model.VatNuoi;
+import com.fpoly.dell.project.adapter.ChiPhiAdapter;
+import com.fpoly.dell.project.adapter.NoteAdapter;
+import com.fpoly.dell.project.dao.ChiPhiDao;
+import com.fpoly.dell.project.dao.NoteDao;
+import com.fpoly.dell.project.model.ChiPhi;
+import com.fpoly.dell.project.model.Note;
 import com.fpoly.dell.project1.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GiongAcitivity extends AppCompatActivity {
-
-    private static List<Giong> dsgiong = new ArrayList<>();
-    private ListView lvgiong;
-    private GiongAdapter adapter = null;
-    private GiongDao giongDao;
-    private FloatingActionButton fabAdd;
+public class NoteActivity extends AppCompatActivity {
+    private List<Note> dsNote = new ArrayList<>();
+    private NoteAdapter adapter = null;
+    private final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_giong);
-        setTitle("Quản lý giống");
-
+        setContentView(R.layout.activity_note);
+        setTitle("Ghi chú");
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        ListView lvNote = findViewById(R.id.lv_note);
 
-        lvgiong = findViewById(R.id.lv_giong);
-        giongDao = new GiongDao(GiongAcitivity.this);
+        FloatingActionButton fab = findViewById(R.id.fabAdd);
 
 
-        dsgiong = giongDao.getAllGiong();
+        NoteDao noteDao = new NoteDao(NoteActivity.this);
+        try {
+            dsNote = noteDao.getAllNote();
+        } catch (Exception e) {
+            Log.d("Error: ", e.toString());
+        }
+        adapter = new NoteAdapter(this, dsNote);
+        lvNote.setAdapter(adapter);
 
-        adapter = new GiongAdapter(dsgiong, this);
-        lvgiong.setAdapter(adapter);
-
-        lvgiong.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvNote.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(GiongAcitivity.this, ThemGiongActivity.class);
+                Intent intent = new Intent(NoteActivity.this, ChiTietNoteActivity.class);
                 Bundle b = new Bundle();
 
-                b.putString("MAGIONG", dsgiong.get(position).getMaGiong());
-                b.putString("TENGIONG", dsgiong.get(position).getTenGiong());
-                b.putString("XUATXU", dsgiong.get(position).getXuatXu());
+                b.putString("MANOTE", dsNote.get(position).getManote());
+                b.putString("TENNOTE", dsNote.get(position).getTennote());
+                b.putString("NOIDUNG", dsNote.get(position).getNoidung());
+
 
                 intent.putExtras(b);
                 startActivity(intent);
             }
         });
-        initView();
 
-        lvgiong.setTextFilterEnabled(true);
+
+        // TextFilter
+        lvNote.setTextFilterEnabled(true);
         EditText edSeach = findViewById(R.id.edSearch);
         edSeach.addTextChangedListener(new TextWatcher() {
             @Override
@@ -89,15 +93,14 @@ public class GiongAcitivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
-        fabAdd.setOnClickListener(new View.OnClickListener() {
+
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent a = new Intent(GiongAcitivity.this, ThemGiongActivity.class);
+                Intent a = new Intent(NoteActivity.this, ThemNoteActivity.class);
                 startActivity(a);
             }
         });
     }
-    private void initView() {
-        fabAdd = (FloatingActionButton) findViewById(R.id.fabAdd);
-    }
+
 }

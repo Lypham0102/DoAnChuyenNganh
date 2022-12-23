@@ -22,10 +22,6 @@ public class ThemGiongActivity extends AppCompatActivity {
 
 
     private GiongDao giongDao;
-//    private ChungLoaiDao chungLoaiDao;
-//    private String maChungLoai = "";
-//    private List<ChungLoai> chungLoaiList = new ArrayList<>();
-//    private EditText edMavatnuoi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,50 +33,19 @@ public class ThemGiongActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         edMagiong = (EditText) findViewById(R.id.ed_magiong);
-        //spVatnuoi = (Spinner) findViewById(R.id.sp_Vatnuoi);
-        //getVatNuoi();
         edTengiong = (EditText) findViewById(R.id.ed_tengiong);
         edXuatxu = (EditText) findViewById(R.id.ed_xuatxu);
-
-
-        //spVatnuoi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//
-//                maChungLoai =
-//                        chungLoaiList.get(spVatnuoi.getSelectedItemPosition()).getTenvatnuoi();
-//            }
-
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
 
         //load data into form
         Intent in = getIntent();
         Bundle b = in.getExtras();
         if (b != null) {
             edMagiong.setText(b.getString("MAGIONG"));
-            //String maChungLoai = b.getString("MACHUNGLOAI");
             edTengiong.setText(b.getString("TENGIONG"));
             edXuatxu.setText(b.getString("XUATXU"));
-//            edSuckhoe.setText(b.getString("SUCKHOE"));
-//
-//            spVatnuoi.setSelection(checkPositionTheLoai(maChungLoai));
         }
-
-
     }
 
-//    private void getVatNuoi() {
-//        chungLoaiDao = new ChungLoaiDao(ThemVatNuoiActivity.this);
-//        chungLoaiList = chungLoaiDao.getAllChungLoai();
-//        ArrayAdapter<ChungLoai> dataAdapter = new ArrayAdapter<>(this,
-//                android.R.layout.simple_spinner_item, chungLoaiList);
-//        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spVatnuoi.setAdapter(dataAdapter);
-//    }
 
     public void add(View view) {
         giongDao = new GiongDao(ThemGiongActivity.this);
@@ -121,13 +86,5 @@ public class ThemGiongActivity extends AppCompatActivity {
         finish();
     }
 
-//    public int checkPositionTheLoai(String strTheLoai) {
-//        for (int i = 0; i < chungLoaiList.size(); i++) {
-//            if (strTheLoai.equals(chungLoaiList.get(i).getMachungloai())) {
-//                return i;
-//            }
-//        }
-//        return 0;
-//    }
 
 }

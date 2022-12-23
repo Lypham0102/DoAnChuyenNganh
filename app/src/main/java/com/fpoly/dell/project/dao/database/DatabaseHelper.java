@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.fpoly.dell.project.dao.BayDanDao;
 import com.fpoly.dell.project.dao.ChiPhiDao;
 import com.fpoly.dell.project.dao.NCCDao;
+import com.fpoly.dell.project.dao.NoteDao;
 import com.fpoly.dell.project.dao.ThucAnDao;
 import com.fpoly.dell.project.dao.VatNuoiDao;
 import com.fpoly.dell.project.dao.GiongDao;
@@ -22,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(ChungLoaiDao.SQL_CHUNGLOAI);
+        db.execSQL(NoteDao.SQL_NOTE);
         db.execSQL(VatNuoiDao.SQL_VATNUOI);
         db.execSQL(ChiPhiDao.SQL_CHIPHI);
         db.execSQL(ThucAnDao.SQL_THUCAN);
@@ -30,11 +31,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(GiongDao.SQL_GIONG);
         db.execSQL(TrangThietBiDao.SQL_TRANGTHIETBI);
         db.execSQL(NCCDao.SQL_NCC);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        //db.execSQL("Drop table if exists "+ChungLoaiDao.TABLE_NAME);
+        db.execSQL("Drop table if exists "+ NoteDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+VatNuoiDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ChiPhiDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ThucAnDao.TABLE_NAME);
@@ -42,6 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("Drop table if exists "+ GiongDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ TrangThietBiDao.TABLE_NAME);
         db.execSQL("Drop table if exists "+ NCCDao.TABLE_NAME);
+
     }
 
 }

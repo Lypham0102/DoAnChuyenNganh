@@ -56,7 +56,7 @@ public class ThucAnActivity extends AppCompatActivity{
                 b.putString("MALOAI", dsthucan.get(position).getMaloai());
                 b.putString("SOLUONG", dsthucan.get(position).getSoluong());
                 b.putString("DONGIA", dsthucan.get(position).getDongia());
-                //b.putString("MANCC", dsthucan.get(position).getMancc());
+                //b.putString("MANHACUNGCAP", dsthucan.get(position).getMaNhaCungCap());
                 intent.putExtras(b);
                 startActivity(intent);
             }

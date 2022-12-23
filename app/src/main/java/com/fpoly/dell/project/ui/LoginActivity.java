@@ -225,7 +225,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
             valid = false;
-            textInputLayoutEmail.setError("Please enter valid email!");
+            //textInputLayoutEmail.setError("Please enter valid email!");
         } else {
             valid = true;
             textInputLayoutEmail.setError(null);

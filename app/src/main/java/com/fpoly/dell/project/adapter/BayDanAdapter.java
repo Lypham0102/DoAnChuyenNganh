@@ -108,9 +108,9 @@ public class BayDanAdapter extends BaseAdapter implements Filterable{
             holder = (BayDanAdapter.ViewHolder) convertView.getTag();
         BayDan entry = bayDanList.get(i);
         holder.img.setImageResource(R.drawable.pigsss);
-        holder.txtMaBayDan.setText("Mã: " + entry.getMaBayDan());
-        holder.txtSoBayDan.setText("Số chuồng: " + entry.getSoBayDan());
-        holder.txtSoLuongVat.setText("Số lượng: " + entry.getSoLuongVat());
+        holder.txtMaBayDan.setText("Chuồng số: " + entry.getSoBayDan());
+        holder.txtSoBayDan.setText("Số lượng: " + entry.getSoLuongVat());
+        holder.txtSoLuongVat.setText("Cám: " + entry.getMaThucAn());
         return convertView;
     }
     @Override
@@ -138,7 +138,7 @@ public class BayDanAdapter extends BaseAdapter implements Filterable{
                 List<BayDan> lsHoaDon = new ArrayList<>();
                 for (BayDan p : bayDanList) {
                     if
-                    (p.getMaBayDan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getSoBayDan().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;

@@ -121,7 +121,7 @@ public class ChiPhiAdapter extends BaseAdapter implements Filterable {
 
             holder=(ViewHolder)convertView.getTag();
         ChiPhi _entry = arrChiPhi.get(position);
-        holder.img.setImageResource(R.drawable.chiphi);
+        holder.img.setImageResource(R.drawable.expense);
         holder.txttenthucan.setText("Tên: "+_entry.getTenthucan());
         holder.txtsoluong.setText("Số Lượng: "+_entry.getSoluong());
         holder.txtgiatien.setText("Giá Tiền: "+numberFormat.format(Long.valueOf(_entry.getGiatien()))+" vnđ");

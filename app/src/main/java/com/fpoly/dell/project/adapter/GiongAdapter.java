@@ -110,7 +110,7 @@ public class GiongAdapter extends BaseAdapter implements Filterable {
         } else
             holder = (GiongAdapter.ViewHolder) convertView.getTag();
         Giong entry = giongList.get(i);
-        holder.img.setImageResource(R.drawable.vatnuoi1);
+        holder.img.setImageResource(R.drawable.pork);
         holder.txtMaGiong.setText("Mã giống: " + entry.getMaGiong());
         holder.txtTenGiong.setText("Tên giống: " + entry.getTenGiong());
         holder.txtXuatXu.setText("Xuất xứ: " + entry.getXuatXu());
@@ -141,7 +141,7 @@ public class GiongAdapter extends BaseAdapter implements Filterable {
                 List<Giong> lsHoaDon = new ArrayList<>();
                 for (Giong p : giongList) {
                     if
-                    (p.getMaGiong().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getTenGiong().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;

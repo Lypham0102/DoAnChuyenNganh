@@ -18,8 +18,10 @@ import com.fpoly.dell.project.model.NCC;
 import com.fpoly.dell.project.model.ThucAn;
 import com.fpoly.dell.project1.R;
 
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ThemThucAnActivity extends AppCompatActivity{
 
@@ -32,19 +34,24 @@ public class ThemThucAnActivity extends AppCompatActivity{
     private ThucAnDao thucAnDao;
 
     private NCCDao nccDao;
-    private String Mancc = "";
+    private String maNhacungcap = "";
     private List<NCC> nccList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_them_thuc_an);
-
-        setTitle("Thêm thức ăn");
-
+        Random a = new Random();
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        byte[] array = new byte[7]; // length is bounded by 7
+        new Random().nextBytes(array);
+        String generatedString = new String(array, Charset.forName("utf-8"));
+
+
         edMathucan = (EditText) findViewById(R.id.ed_Mathucan);
+        edMathucan.setText(generatedString);
         edTenthucan = (EditText) findViewById(R.id.ed_Tenthucan);
         edMaloai = (EditText) findViewById(R.id.ed_Maloai);
         edSoluong = (EditText) findViewById(R.id.ed_Soluong);
@@ -57,7 +64,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                Mancc =
+                maNhacungcap =
                         nccList.get(spNCC.getSelectedItemPosition()).getTenNCC();
             }
 
@@ -72,7 +79,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
         if (b != null) {
             edMathucan.setText(b.getString("MATHUCAN"));
             edTenthucan.setText(b.getString("TENTHUCAN"));
-            String Mancc = b.getString("MANCC");
+            String maNhaCungCap = b.getString("MANHACUNGCAP");
             edMaloai.setText(b.getString("MALOAI"));
             edSoluong.setText(b.getString("SOLUONG"));
             edDongia.setText(b.getString("DONGIA"));
@@ -93,7 +100,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
         thucAnDao = new ThucAnDao(ThemThucAnActivity.this);
         ThucAn thucAn = new
                 ThucAn(edMathucan.getText().toString(), edTenthucan.getText().toString(),
-                edMaloai.getText().toString(), edSoluong.getText().toString(),edDongia.getText().toString(), Mancc);
+                edMaloai.getText().toString(), edSoluong.getText().toString(),edDongia.getText().toString(), maNhacungcap);
         try {
             if (validateForm()>0) {
                 if (thucAnDao.insertThucAn(thucAn) > 0) {
@@ -114,7 +121,7 @@ public class ThemThucAnActivity extends AppCompatActivity{
 
     private int validateForm() {
         int check = 1;
-        if (edMathucan.getText().length() == 0 || edTenthucan.getText().length() == 0
+        if (edTenthucan.getText().length() == 0
                 || edMaloai.getText().length() == 0 || edSoluong.getText().length() == 0
                 || edDongia.getText().length() == 0) {
             Toast.makeText(getApplicationContext(), "Bạn phải nhập đủ thông tin", Toast.LENGTH_SHORT).show();

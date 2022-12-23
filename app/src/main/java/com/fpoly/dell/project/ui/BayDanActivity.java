@@ -26,6 +26,7 @@ public class BayDanActivity extends AppCompatActivity {
     private BayDanAdapter adapter = null;
     private BayDanDao bayDanDao;
     private FloatingActionButton fabAdd;
+    private FloatingActionButton fabNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,7 @@ public class BayDanActivity extends AppCompatActivity {
             }
         });
         initView();
+        initVieww();
 
         lvbaydan.setTextFilterEnabled(true);
         EditText edSeach = findViewById(R.id.edSearch);
@@ -90,10 +92,21 @@ public class BayDanActivity extends AppCompatActivity {
                 startActivity(a);
             }
         });
+
+        fabNote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a = new Intent(BayDanActivity.this, NoteActivity.class);
+                startActivity(a);
+            }
+        });
     }
 
     private void initView() {
         fabAdd = (FloatingActionButton) findViewById(R.id.fabAdd);
+    }
+    private void initVieww() {
+        fabNote = (FloatingActionButton) findViewById(R.id.fabNote);
     }
 }
 

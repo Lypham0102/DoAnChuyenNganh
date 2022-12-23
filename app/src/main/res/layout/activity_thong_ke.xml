@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F1F4DE"
     tools:context="com.fpoly.dell.project.ui.ThongKeActivity">
 
 
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
+        android:textStyle="bold"
         android:text="@string/ngay_ThongKe"
         android:textSize="18sp"
 
@@ -28,7 +30,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
         android:text="@string/thang_thongke"
-
+        android:textStyle="bold"
         android:layout_marginStart="15dp"
         android:textSize="18sp" />
 
@@ -39,7 +41,7 @@
         android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
         android:text="@string/nam_thongke"
-
+        android:textStyle="bold"
         android:layout_marginStart="15dp"
         android:textSize="18sp" />
 

@@ -5,6 +5,7 @@ public class BayDan {
     private String soBayDan;
     private String soLuongVat;
     private String maThucAn;
+
     public BayDan(){}
     public BayDan(String maBayDan, String maThucAn,  String soBayDan, String soLuongVat) {
         this.maBayDan = maBayDan;

@@ -66,42 +66,8 @@ public class ChiTietChiPhiActivity extends AppCompatActivity implements DatePick
         tvNgaymua.setText("Ngày mua: "+ngaynhap);
         tvSoluong.setText("Số lượng: "+soluong);
         tvGiatien.setText("Giá Tiền: "+numberFormat.format(Long.parseLong(giatien))+" vnđ");
-//        btnHuy.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                finish();
-//            }
-//        });
-//        btnAdd.setOnClickListener(new View.OnClickListener() {
-//            @SuppressLint("SimpleDateFormat")
-//            @Override
-//            public void onClick(View view) {
-//                if (validation() > 0) {
-//                    Date date = null;
-//                    try {
-//                      date = new SimpleDateFormat("yyyy-MM-dd").parse(edNgayMua.getText().toString());
-//
-//                    } catch (ParseException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                    if (chiPhiDao.updateChiphi(edtMachiphi.getText().toString(), edtTenthucan.getText().toString(),
-//                            date, edtSoLuongChiPhi.getText().toString(), edtGiatien.getText().toString()) > 0) {
-//                        Toast.makeText(getApplicationContext(), "Lưu Thành Công", Toast.LENGTH_SHORT).show();
-//                        Intent a = new Intent(ChiTietChiPhiActivity.this, ChiPhiActivity.class);
-//                        startActivity(a);
-//                    }
-//                }
-//
-//            }
-//        });
     }
-//
-//    public static String convertDate(String dateTime) {
-//        Date date = new Date(dateTime);
-//        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-//        return formatter.format(date);
-//    }
+
 
     public void datePicker(View view) {
         DatePickerFragment fragment = new DatePickerFragment();

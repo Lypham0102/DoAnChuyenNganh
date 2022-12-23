@@ -144,7 +144,7 @@ public class TrangThietBiAdapter extends BaseAdapter implements Filterable {
                 List<TrangThietBi> lsHoaDon = new ArrayList<>();
                 for (TrangThietBi p : trangThietBiList) {
                     if
-                    (p.getMaNhaCungCap().toUpperCase().startsWith(constraint.toString().toUpperCase()))
+                    (p.getTenTrangThietBi().toUpperCase().startsWith(constraint.toString().toUpperCase()))
                         lsHoaDon.add(p);
                 }
                 results.values = lsHoaDon;
